@@ -16,7 +16,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: ../../Dropbox (Work)/Running projects/GGJ20/FMOD/GGJ20 OCD/Build/Desktop
+  sourceBankPath: Audio/FMODbanks/Desktop
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -76,6 +76,8 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Ambience
+  - Music
   BanksToLoad: []
   LiveUpdatePort: 9264
