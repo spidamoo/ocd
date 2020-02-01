@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Puzzle : MonoBehaviour
 {
     public List<Collider> colliders;
     public bool solved;
+    public UnityEvent solvedEvent;
+
     private int collidedTriggers = 0;
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,7 @@ public class Puzzle : MonoBehaviour
         {
             solved = true;
             Debug.Log("solved");
+            solvedEvent.Invoke();
         }
         else
         {

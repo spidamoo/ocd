@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
     public float speed = 1.0f;
     [Range(0.0f, 300.0f)]
     public float force = 10.0f;
+    public bool inTutorial = true;
+
     private CharacterController controller;
     private Vector2 currentRotation;
     private LayerMask dragMask;
@@ -27,6 +29,7 @@ public class Character : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         dragMask = LayerMask.GetMask("Draggable");
+        currentRotation = new Vector2(transform.rotation.y, transform.rotation.x);
     }
 
     // Update is called once per frame
@@ -35,7 +38,7 @@ public class Character : MonoBehaviour
         controller.SimpleMove( Input.GetAxis("Vertical") * transform.forward * speed );
         controller.SimpleMove( Input.GetAxis("Horizontal") * transform.right * speed );
 
-        if ( Mathf.Abs( Input.GetAxis("Shift") ) > 0.1f )
+        if (inTutorial || Mathf.Abs( Input.GetAxis("Shift") ) > 0.1f)
         {
             SetLookMode(LookMode.Free);
         }
