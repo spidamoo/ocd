@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7ff50d05f408 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7ff4f9c5a408 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,172 +20,10 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f899bba8 : node = 0x7ff4f7becfb0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f899bba8
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f7bed0c0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f899bba8
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f899bba8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f915fd08)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f91d3218)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f91d33a8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f915fd08 : node = 0x7ff4f8f04ad0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f915fd08
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f8f04be0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f915fd08
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f915fd08.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f899bba8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f909e678)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f92280a8)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f92280a8 : node = 0x7ff4f776efb0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92280a8
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f776f0c0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92280a8
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f92280a8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f915fd08)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f90b0928)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f92087b8)
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f7d9ee18 : node = 0x7ff4f8cf0b80
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f7d9ee18
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f8cf0c90
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f7d9ee18
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f7d9ee18.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f92280a8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f933ace8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f9326718)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f9326718 : node = 0x7ff4f8f04ad0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f9326718
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f8f04be0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f9326718
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f9326718.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f7d9ee18)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f933b1a8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f915fd08)
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f909da78 : node = 0x7ff4f8b6bb00
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f909da78
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f8b6bc10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f909da78
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f909da78.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f9326718)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f933ace8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f933a748)
-[LOG] SystemI::createSound                     : filename = Audio/FMODbanks/Desktop/Sound Design.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff4f8a35938 : node = 0x7ff4f7a65500
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff4f9160998.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f8a35938
-[LOG] SystemI::createSoundInternal             :     Create name='Audio/FMODbanks/Desktop/Sound Design.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 648800
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff4f7a65610
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voicemail v1', format=2, channels=2, frequency=48000, lengthbytes=648128, lengthpcm=3390110, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.994659.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f8a35938
-[LOG] SoundI::getSubSound                      : sound 0x7ff4f8a35938.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f909da78)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f933b1a8)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f915fd08)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff4f92009e8
-[LOG] SoundI::release                          : Room tone v1 (0x7ff4f9240b08)
-[LOG] SoundI::release                          :     Room tone v1 (0x7ff4f90b7d78)
-[LOG] SoundI::release                          :     Room tone v1 (0x7ff4f8c8ba18)
-[LOG] SoundI::release                          : City ambience v1 (0x7ff4f910fb78)
-[LOG] SoundI::release                          :     City ambience v1 (0x7ff4f90853f8)
-[LOG] SoundI::release                          :     City ambience v1 (0x7ff4f92009e8)
-[LOG] SoundI::release                          : Voicemail v1 (0x7ff4f8a35938)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f8ed6828)
-[LOG] SoundI::release                          :     Voicemail v1 (0x7ff4f90d3a58)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
