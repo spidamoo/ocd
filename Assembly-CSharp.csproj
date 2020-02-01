@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\FMOD\AmbiencePlayer.cs" />
     <Compile Include="Assets\Scripts\FMOD\CityAmbience.cs" />
+    <Compile Include="Assets\Scripts\FMOD\PhoneAudio.cs" />
     <Compile Include="Assets\Scripts\Magnet.cs" />
     <Compile Include="Assets\Scripts\Puzzle.cs" />
     <Reference Include="Unity.Timeline.Editor">
