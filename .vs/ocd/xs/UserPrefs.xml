@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{E8926A4D-E611-A303-B82A-A71D8A8AABEB}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FMOD/CityAmbience.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MusicPlayer.cs">
     <Files>
-      <File FileName="Assets/Scripts/FMOD/AmbiencePlayer.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/FMOD/PhoneAudio.cs" Line="15" Column="74" />
-      <File FileName="Assets/Scripts/FMOD/CityAmbience.cs" Line="27" Column="81" />
+      <File FileName="Assets/Scripts/FMOD/AmbiencePlayer.cs" Line="11" Column="5" />
+      <File FileName="Assets/Scripts/FMOD/CityAmbience.cs" Line="22" Column="50" />
+      <File FileName="Assets/Scripts/FMOD/PhoneAudio.cs" Line="13" Column="35" />
+      <File FileName="Assets/MusicPlayer.cs" Line="9" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
