@@ -15,9 +15,10 @@ public class Character : MonoBehaviour
     [Range(0.0f, 300.0f)]
     public float force = 10.0f;
     public bool inTutorial = true;
+    public GameObject crosshair;
 
     private CharacterController controller;
-    private Vector2 currentRotation;
+    private Vector2 currentRotation = new Vector2(-89.14001f, -54.945f);
     private LayerMask dragMask;
     private LookMode lookMode = LookMode.Free;
     private bool ignoreMouseMove = false;
@@ -29,15 +30,11 @@ public class Character : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         dragMask = LayerMask.GetMask("Draggable");
-        currentRotation = new Vector2(transform.rotation.y, transform.rotation.x);
     }
 
     // Update is called once per frame
     void Update()
     {
-        controller.SimpleMove( Input.GetAxis("Vertical") * transform.forward * speed );
-        controller.SimpleMove( Input.GetAxis("Horizontal") * transform.right * speed );
-
         if (inTutorial || Mathf.Abs( Input.GetAxis("Shift") ) > 0.1f)
         {
             SetLookMode(LookMode.Free);
@@ -45,6 +42,9 @@ public class Character : MonoBehaviour
         else
         {
             SetLookMode(LookMode.Locked);
+
+            controller.SimpleMove( Input.GetAxis("Vertical") * transform.forward * speed );
+            controller.SimpleMove( Input.GetAxis("Horizontal") * transform.right * speed );
 
             float mouseXmove = Input.GetAxis("Mouse X");
             float mouseYmove = Input.GetAxis("Mouse Y");
@@ -110,11 +110,20 @@ public class Character : MonoBehaviour
         {
             case LookMode.Free:
                 Cursor.lockState = CursorLockMode.None;
+                crosshair.SetActive(false);
                 break;
             case LookMode.Locked:
                 Cursor.lockState = CursorLockMode.Locked;
                 ignoreMouseMove = true;
+                crosshair.SetActive(true);
+                // currentRotation = new Vector2(transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.x);
                 break;
         }
+    }
+
+    public void FinishTutorial()
+    {
+        inTutorial = false;
+        draggedBody = null;
     }
 }
