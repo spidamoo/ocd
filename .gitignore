@@ -4,3 +4,5 @@ Library
 fmod_editor.log
 **/.DS_Store
 **/FMODStudioCache.asset
+**/.csproj
+**/.sln
