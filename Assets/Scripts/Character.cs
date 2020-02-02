@@ -77,6 +77,13 @@ public class Character : MonoBehaviour
                     draggedBody = hit.rigidbody;
                     dragPoint = draggedBody.transform.InverseTransformPoint(hit.point);
                     dragDistance = hit.distance;
+
+                    var puzzle = draggedBody.gameObject.GetComponentInChildren<Puzzle>();
+                    if (puzzle != null)
+                    {
+                        Debug.Log("Hit puzzle:" + puzzle.name);
+                        puzzle.StartSolving();
+                    }
                 }
             }
             else

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -496,6 +496,9 @@ MonoBehaviour:
   colliders:
   - {fileID: 0}
   solved: 0
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1264,6 +1267,9 @@ MonoBehaviour:
   - {fileID: 978812312}
   - {fileID: 2030631787}
   solved: 0
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1476,6 +1482,9 @@ MonoBehaviour:
   colliders:
   - {fileID: 1951869083}
   solved: 0
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1966,6 +1975,9 @@ MonoBehaviour:
   colliders:
   - {fileID: 1427650428}
   solved: 0
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3051,7 +3063,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771327033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3495,7 +3507,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961449431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3549,6 +3561,9 @@ MonoBehaviour:
   colliders:
   - {fileID: 499841080}
   solved: 0
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls: []

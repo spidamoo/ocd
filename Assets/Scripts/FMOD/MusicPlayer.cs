@@ -12,7 +12,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void Awake()
     {
-        MusingSingleton()
+        MusingSingleton();
     }
 
 
@@ -39,7 +39,7 @@ public class MusicPlayer : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(GameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
 

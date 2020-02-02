@@ -7,6 +7,7 @@ public class Puzzle : MonoBehaviour
 {
     public List<Collider> colliders;
     public bool solved;
+    public UnityEvent startEvent;
     public UnityEvent solvedEvent;
 
     private int collidedTriggers = 0;
@@ -56,5 +57,10 @@ public class Puzzle : MonoBehaviour
                 Debug.Log("unsolved");
             solved = false;
         }
+    }
+
+    public void StartSolving()
+    {
+        startEvent.Invoke();
     }
 }
