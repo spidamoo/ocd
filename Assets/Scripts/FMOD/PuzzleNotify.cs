@@ -15,6 +15,14 @@ public class PuzzleNotify : MonoBehaviour
         PuzzleNotifyInstance = FMODUnity.RuntimeManager.CreateInstance(PuzzleNotifyEvent);
     }
 
+
+    void Update()
+    {
+        PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
+
+    }
+
+
     public void NotifyMe()
     {
         PuzzleNotifyInstance.start();
@@ -25,11 +33,5 @@ public class PuzzleNotify : MonoBehaviour
     {
         PuzzleNotifyInstance.release();
         PuzzleNotifyInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-    }
-
-    void Update()
-    {
-        PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
-        
     }
 }
