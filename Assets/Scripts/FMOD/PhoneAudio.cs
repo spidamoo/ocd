@@ -12,7 +12,7 @@ public class PhoneAudio : MonoBehaviour
     FMOD.Studio.EventInstance AlexCallingInstance;
     FMOD.Studio.EventInstance PlayVoicemailInstance;
 
-    int puzzleCounter = 0;
+    //int puzzleCounter = 0;
 
     Transform transformPos = null;
 
@@ -63,7 +63,7 @@ public class PhoneAudio : MonoBehaviour
 
     public void PlayVoicemail()
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
+        //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
 
