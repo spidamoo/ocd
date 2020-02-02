@@ -19,7 +19,7 @@ public class AmbiencePlayer : MonoBehaviour
 
         PenScribbleInstance = FMODUnity.RuntimeManager.CreateInstance(PenScribbleEvent);
         PenScribbleInstance.start();
-        PenScribbleInstance.release();
+        //PenScribbleInstance.release();
     }
 
     void Update()

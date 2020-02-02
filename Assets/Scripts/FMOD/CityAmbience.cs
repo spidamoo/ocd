@@ -28,7 +28,7 @@ public class CityAmbience : MonoBehaviour
 
     private void OnDestroy()
     {
-        CityAmb.release();
+        //CityAmb.release();
         CityAmb.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

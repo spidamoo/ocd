@@ -25,7 +25,7 @@ public class PhoneAudio : MonoBehaviour
 
 
         AlexCallingInstance.start();
-        AlexCallingInstance.release();
+        //AlexCallingInstance.release();
         //FMODUnity.RuntimeManager.PlayOneShotAttached(EventPath, gameObject);
     }
 
@@ -66,6 +66,7 @@ public class PhoneAudio : MonoBehaviour
         //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
+
 
         PlayVoicemailInstance.start();
         //PlayVoicemailInstance.release();

@@ -336,87 +336,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354769069}
   m_CullTransparentMesh: 0
---- !u!114 &373943498 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8298787326787618642, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 781359273}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7397073b50e71413489efb8674ba879d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &781359273
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8298787326787618644, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Music Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe, type: 3}
 --- !u!1 &887043421
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +464,7 @@ MonoBehaviour:
           m_StringArgument: start
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 373943498}
+      - m_Target: {fileID: 1611642357}
         m_MethodName: StartGameMusic
         m_Mode: 1
         m_Arguments:
@@ -1004,6 +923,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1611642356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611642358}
+  - component: {fileID: 1611642357}
+  m_Layer: 0
+  m_Name: IntroAudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1611642357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611642356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b44a5e88ed8c42b7836f33cb52d9085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntroAudioEvent: event:/Music/Anxiety intro
+--- !u!4 &1611642358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611642356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 401.0846, y: 428.5694, z: -243.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022276877
 GameObject:
