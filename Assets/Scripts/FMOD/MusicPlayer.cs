@@ -15,6 +15,7 @@ public class MusicPlayer : MonoBehaviour
 
     public int startGame = 0;
     public int PuzzleCounter = 0;
+    public PhoneAudio phoneAudio;
 
     private void Awake()
     {
@@ -72,7 +73,11 @@ public class MusicPlayer : MonoBehaviour
 
     public void ToRelief()
     {
+
+        phoneAudio.StopVoicemail();
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 0f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 0f);
+
     }
 
 

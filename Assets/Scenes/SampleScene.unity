@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4729,6 +4729,11 @@ PrefabInstance:
       propertyPath: PlaceMarkerEvent
       value: event:/Sound design/PenScribble
       objectReference: {fileID: 0}
+    - target: {fileID: 8298787326787618642, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
+        type: 3}
+      propertyPath: phoneAudio
+      value: 
+      objectReference: {fileID: 805910869}
     - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -36,23 +36,23 @@ public class PhoneAudio : MonoBehaviour
         AlexCallingInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
         PlayVoicemailInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            puzzleCounter += 1;
-            Debug.Log("puzzlecounter: " + puzzleCounter);
-        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    puzzleCounter += 1;
+        //    Debug.Log("puzzlecounter: " + puzzleCounter);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
-            PlayVoicemail();
-        }
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
+        //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
+        //    PlayVoicemail();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            StopVoicemail();
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    StopVoicemail();
+        //}
 
     }
 
@@ -64,6 +64,9 @@ public class PhoneAudio : MonoBehaviour
     public void PlayVoicemail()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
+
         PlayVoicemailInstance.start();
         //PlayVoicemailInstance.release();
 
@@ -72,7 +75,7 @@ public class PhoneAudio : MonoBehaviour
     public void StopVoicemail()
     {
         //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
-        PlayVoicemailInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        PlayVoicemailInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 }
