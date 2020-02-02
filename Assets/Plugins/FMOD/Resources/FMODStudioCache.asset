@@ -124,6 +124,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-9013777827084308000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162473580000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-9010228878966516875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +230,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-8829142658799445389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phone Ring/ToVoicemail
+  m_EditorClassIdentifier: 
+  Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &-8826948500990885458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +334,7 @@ MonoBehaviour:
   lastModified: 637162459940000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8665385730313016502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +407,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8579105439367013583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Design.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Sound Design.bank
+  SubDir: 
+  lastModified: 637162479850000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8576459437442571043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,7 +457,7 @@ MonoBehaviour:
   Path: event:/Sound design/PenScribble
   guid: a5ddf2925b7e7247ba10fe139ecbe8b4
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -590,6 +643,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8095099723018200158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Design.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Sound Design.bank
+  SubDir: 
+  lastModified: 637162471110000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8086084757957394034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +694,7 @@ MonoBehaviour:
   Path: event:/Ambience/Room tone
   guid: c8c6de503d13be468c17ff8c4317cd0a
   Banks:
-  - {fileID: 3565421091054563850}
+  - {fileID: 219013801021274609}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -744,6 +815,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7901174738734477521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637162471570000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7822058324888804764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +851,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7811667940618545425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phone Ring/ToVoicemail
+  m_EditorClassIdentifier: 
+  Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-7799556159308884171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,7 +1045,7 @@ MonoBehaviour:
   Path: event:/Music/Anxiety master
   guid: 620405abe46ecc4c94298bedc5aa86de
   Banks:
-  - {fileID: -5071178992811014116}
+  - {fileID: 2911427311464118467}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -997,7 +1103,7 @@ MonoBehaviour:
   Path: event:/Sound design/Marker
   guid: 06fc35e180d2f040ab57507ebc2af71f
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1005,6 +1111,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 808
+--- !u!114 &-7084889924628561037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637162473580000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7049774000661039570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,7 +1181,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6989181976914881808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,7 +1337,7 @@ MonoBehaviour:
   Path: event:/Music/Anxiety sound layer
   guid: 5015eb7649963747b93a20013e35e4ba
   Banks:
-  - {fileID: -5071178992811014116}
+  - {fileID: 2911427311464118467}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1290,7 +1414,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6621261110492357881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1484,7 @@ MonoBehaviour:
   Path: event:/Ambience/Fridge
   guid: df909791008f1b469cda854fc8ceff94
   Banks:
-  - {fileID: 3565421091054563850}
+  - {fileID: 219013801021274609}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2088,7 +2212,7 @@ MonoBehaviour:
   Path: event:/Ambience/City ambience
   guid: a8424045808ba348bd54d094cbe4eb9e
   Banks:
-  - {fileID: 3565421091054563850}
+  - {fileID: 219013801021274609}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2111,7 +2235,7 @@ MonoBehaviour:
   Path: event:/Sound design/Voicemail
   guid: a8995631ebce5a46b42b72855cfab33a
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -2188,7 +2312,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5145316855451645690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,7 +2382,7 @@ MonoBehaviour:
   lastModified: 637162459940000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4988858738369219132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2365,7 +2489,25 @@ MonoBehaviour:
   lastModified: 637162459940000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-4722658233507439982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637162471570000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-4715642771042224274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2479,6 +2621,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 44000
+--- !u!114 &-4282577956952337356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Anxiety
+  m_EditorClassIdentifier: 
+  Name: Anxiety
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &-4275972702962776606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,6 +2695,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 1
+  Exists: 0
+--- !u!114 &-4229838866898549402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162471570000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-4226069652964742782
 MonoBehaviour:
@@ -2646,6 +2823,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+  Exists: 0
+--- !u!114 &-4041488169193609532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Design.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Sound Design.bank
+  SubDir: 
+  lastModified: 637162470840000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-4039982349940996767
 MonoBehaviour:
@@ -3368,6 +3563,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2314274666385044216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Anxiety
+  m_EditorClassIdentifier: 
+  Name: Anxiety
+  Min: 0
+  Max: 2
+  Default: 1
+  Exists: 1
 --- !u!114 &-2308498904266783203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3756,7 +3968,7 @@ MonoBehaviour:
   lastModified: 637162459930000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1504841530951188374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3806,8 +4018,8 @@ MonoBehaviour:
   Path: snapshot:/AnxietySnapshot
   guid: a27fbadb22742a4da5aff8d72d2307ba
   Banks:
-  - {fileID: -1525791026736966292}
-  - {fileID: -5071178992811014116}
+  - {fileID: 3907744314814813804}
+  - {fileID: 2911427311464118467}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -4089,6 +4301,24 @@ MonoBehaviour:
   Max: 6
   Default: 0
   Exists: 0
+--- !u!114 &-1091348286405820559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Design.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Sound Design.bank
+  SubDir: 
+  lastModified: 637162471570000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1072870390565644623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4320,6 +4550,24 @@ MonoBehaviour:
   Max: 6
   Default: 0
   Exists: 1
+--- !u!114 &-356798427106758396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637162471110000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-338231981628006223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,11 +4671,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7672077952444127835}
-  - {fileID: 3565421091054563850}
-  - {fileID: -1525791026736966292}
-  - {fileID: -5071178992811014116}
-  - {fileID: -4756894363619971765}
-  - {fileID: -8674948128178339191}
+  - {fileID: 219013801021274609}
+  - {fileID: 3907744314814813804}
+  - {fileID: 2911427311464118467}
+  - {fileID: -8579105439367013583}
+  - {fileID: 4857643016972107116}
   EditorEvents:
   - {fileID: 2563845332147265247}
   - {fileID: -5313564067224685990}
@@ -4446,14 +4694,14 @@ MonoBehaviour:
   - {fileID: 7566317110471316899}
   - {fileID: -8475597098850778827}
   EditorParameters:
-  - {fileID: 8074078897971623063}
-  - {fileID: -6994957368335251651}
-  - {fileID: -6659633076470832147}
+  - {fileID: 1680455639715392476}
+  - {fileID: -4282577956952337356}
+  - {fileID: 3455217607516081297}
   MasterBanks:
-  - {fileID: -1525791026736966292}
+  - {fileID: 3907744314814813804}
   StringsBanks:
   - {fileID: 7672077952444127835}
-  stringsBankWriteTime: 637162459930000000
+  stringsBankWriteTime: 637162479840000000
   cacheVersion: 3
 --- !u!114 &36112083459282830
 MonoBehaviour:
@@ -4472,6 +4720,42 @@ MonoBehaviour:
   Max: 6
   Default: 0
   Exists: 1
+--- !u!114 &152991891690504467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637162471570000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &179073906794855360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637162470840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &185701867332203045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4490,6 +4774,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &219013801021274609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637162479840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &229345552470339402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,7 +5108,7 @@ MonoBehaviour:
   Path: event:/Music/Anxiety music
   guid: 0b147b45b5502d4e9c4934dab09c0f41
   Banks:
-  - {fileID: -5071178992811014116}
+  - {fileID: 2911427311464118467}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -4883,12 +5185,12 @@ MonoBehaviour:
   Path: event:/Sound design/Phone Ring
   guid: 440f2e704b2d494b9a0c6b675fd2566b
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -5245271183535177320}
+  - {fileID: -7811667940618545425}
   MinDistance: 1
   MaxDistance: 20
   Length: 9084
@@ -5021,6 +5323,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 272
+--- !u!114 &1508127619243552021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phone Ring/ToVoicemail
+  m_EditorClassIdentifier: 
+  Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &1512496371595789017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5110,6 +5429,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1680455639715392476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: PuzzleCounter
+  m_EditorClassIdentifier: 
+  Name: PuzzleCounter
+  Min: 0
+  Max: 6
+  Default: 0
+  Exists: 1
 --- !u!114 &1727865176690048086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5269,6 +5605,23 @@ MonoBehaviour:
   Max: 2
   Default: 1
   Exists: 0
+--- !u!114 &2114103059864372578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phone Ring/ToVoicemail
+  m_EditorClassIdentifier: 
+  Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &2120267922055796965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5287,6 +5640,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2155946286767079438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: PuzzleCounter
+  m_EditorClassIdentifier: 
+  Name: PuzzleCounter
+  Min: 0
+  Max: 6
+  Default: 0
+  Exists: 1
 --- !u!114 &2161983027169713550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5460,7 +5830,7 @@ MonoBehaviour:
   Path: event:/Ambience/Clock
   guid: 96300ec07d1c0446a4ccc44218b43a1f
   Banks:
-  - {fileID: 3565421091054563850}
+  - {fileID: 219013801021274609}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -5522,6 +5892,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2655094147415088100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637162473580000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2701225631948896264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5628,6 +6016,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2911427311464118467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637162479850000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2996378370153627606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5750,6 +6156,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &3276178955795355126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Design.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Sound Design.bank
+  SubDir: 
+  lastModified: 637162473580000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3363596680498875804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5765,6 +6189,24 @@ MonoBehaviour:
   Path: Audio/FMODbanks/Desktop/Music.bank
   SubDir: 
   lastModified: 637162190860000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3429841425937418591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Ambience.bank
+  SubDir: 
+  lastModified: 637162471110000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -5786,6 +6228,40 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3454666847484144489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Phone Ring/ToVoicemail
+  m_EditorClassIdentifier: 
+  Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
+--- !u!114 &3455217607516081297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Voicemail
+  m_EditorClassIdentifier: 
+  Name: Voicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &3498252867716564623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5836,6 +6312,24 @@ MonoBehaviour:
   Path: Audio/FMODbanks/Desktop/Ambience.bank
   SubDir: 
   lastModified: 637162459930000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3612013076250759554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637162473580000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -5945,6 +6439,24 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &3907744314814813804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162479840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3921050810722862096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6065,7 +6577,7 @@ MonoBehaviour:
   Path: event:/Sound design/Footsteps
   guid: c3e40bff8f25084ca521254911da3310
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -6230,6 +6742,24 @@ MonoBehaviour:
   Path: Audio/FMODbanks/Desktop/Master.bank
   SubDir: 
   lastModified: 637161840070000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4857643016972107116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637162479850000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -6450,6 +6980,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5298504869280244371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637162470840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5313400094023513157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6622,7 +7170,7 @@ MonoBehaviour:
   Path: event:/Sound design/PenOnFridge
   guid: f66bcdeec89c89449e298a31e46dc56b
   Banks:
-  - {fileID: -4756894363619971765}
+  - {fileID: -8579105439367013583}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6699,6 +7247,24 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 1
+  Exists: 0
+--- !u!114 &5953820116704147339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162470840000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &5967308403522266433
 MonoBehaviour:
@@ -6893,6 +7459,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &6384267529082816041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Voicemail
+  m_EditorClassIdentifier: 
+  Name: Voicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 0
 --- !u!114 &6407200096793776867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7051,7 +7634,7 @@ MonoBehaviour:
   Path: event:/Ambience/Light Buzz
   guid: 2ae0c6c2f3684d40a315a4c881ad94c9
   Banks:
-  - {fileID: 3565421091054563850}
+  - {fileID: 219013801021274609}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -7059,6 +7642,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9956
+--- !u!114 &6841333406481887760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162471110000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6873760231016797550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7111,6 +7712,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7111015965667501160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: PuzzleCounter
+  m_EditorClassIdentifier: 
+  Name: PuzzleCounter
+  Min: 0
+  Max: 6
+  Default: 0
+  Exists: 0
 --- !u!114 &7142537146179123321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7162,6 +7780,24 @@ MonoBehaviour:
   Path: Audio/FMODbanks/Desktop/Ambience.bank
   SubDir: 
   lastModified: 637161803670000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7331821575354685439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637162471110000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -7328,14 +7964,14 @@ MonoBehaviour:
   Path: event:/UI/Puzzle Notify
   guid: 47ebefbc629d5043b4a361f4439f743c
   Banks:
-  - {fileID: -8674948128178339191}
+  - {fileID: 4857643016972107116}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 3000
+  MaxDistance: 7
+  Length: 6500
 --- !u!114 &7578792841566094953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7426,7 +8062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Audio/FMODbanks/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637162459930000000
+  lastModified: 637162479840000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -7610,7 +8246,25 @@ MonoBehaviour:
   Min: 0
   Max: 6
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &8101080176549212634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Audio/FMODbanks/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637162470840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &8164565383444305537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7624,6 +8278,23 @@ MonoBehaviour:
   m_Name: parameter:/Phone Ring/ToVoicemail
   m_EditorClassIdentifier: 
   Name: ToVoicemail
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &8166557121374894983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Voicemail
+  m_EditorClassIdentifier: 
+  Name: Voicemail
   Min: 0
   Max: 2
   Default: 0
@@ -7946,6 +8617,23 @@ MonoBehaviour:
   lastModified: 637162139540000000
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &8967949485543272250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Anxiety
+  m_EditorClassIdentifier: 
+  Name: Anxiety
+  Min: 0
+  Max: 2
+  Default: 1
   Exists: 0
 --- !u!114 &8971005524041081095
 MonoBehaviour:

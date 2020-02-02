@@ -8,7 +8,7 @@ public class MusicPlayer : MonoBehaviour
 
     [FMODUnity.EventRef] public string AnxietyMusic;
     public static FMOD.Studio.EventInstance AnxietyMusicInstance;
-    public int PuzzleCounter = 1;
+    public int PuzzleCounter = 0;
 
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class MusicPlayer : MonoBehaviour
     {
         PuzzleCounter += 1;
         Debug.Log("PuzzleCounter: " + PuzzleCounter);
-        ToAnxiety();
+        //ToAnxiety();
     }
 
 

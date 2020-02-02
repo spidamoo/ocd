@@ -173,6 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202014364}
+  - component: {fileID: 202014365}
   m_Layer: 0
   m_Name: Puzzle 2 (jars)
   m_TagString: Untagged
@@ -197,6 +198,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202014365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202014363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &217937810
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654400151}
+  - component: {fileID: 654400152}
   m_Layer: 0
   m_Name: Puzzle 4 (book)
   m_TagString: Untagged
@@ -822,6 +837,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654400152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654400150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &663341569
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +862,6 @@ GameObject:
   - component: {fileID: 663341573}
   - component: {fileID: 663341572}
   - component: {fileID: 663341571}
-  - component: {fileID: 663341574}
   m_Layer: 0
   m_Name: Pen_Blue
   m_TagString: Untagged
@@ -1352,7 +1379,18 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   solvedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1400,6 +1438,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  theObject: {fileID: 803477357}
+  targetObject: {fileID: 1849008189}
 --- !u!1 &805910865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3889287092898182241, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -1598,10 +1638,43 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1783400317}
+        m_MethodName: ComeToMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   solvedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: ToRelief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   theObject: {fileID: 1676205819}
   targetObject: {fileID: 1316152015}
 --- !u!1 &859426304 stripped
@@ -2093,10 +2166,43 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 202014365}
+        m_MethodName: ComeToMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   solvedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: ToRelief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   theObject: {fileID: 835391849}
   targetObject: {fileID: 1835825148}
 --- !u!1 &935695585 stripped
@@ -3448,6 +3554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783400316}
+  - component: {fileID: 1783400317}
   m_Layer: 0
   m_Name: Puzzle 3 (painting)
   m_TagString: Untagged
@@ -3472,6 +3579,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1783400317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783400315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &1835825148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,10 +4163,43 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 654400152}
+        m_MethodName: ComeToMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   solvedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: ToRelief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   theObject: {fileID: 1893938501}
   targetObject: {fileID: 1581144743}
 --- !u!1 &2014633502

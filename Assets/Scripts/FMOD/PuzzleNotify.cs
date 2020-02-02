@@ -7,14 +7,12 @@ public class PuzzleNotify : MonoBehaviour
 
     [FMODUnity.EventRef] public string PuzzleNotifyEvent;
     FMOD.Studio.EventInstance PuzzleNotifyInstance;
-    //float delayTimer = 10f;
 
     Transform transformPos = null;
 
     void Start()
     {
         PuzzleNotifyInstance = FMODUnity.RuntimeManager.CreateInstance(PuzzleNotifyEvent);
-
     }
 
     public void NotifyMe()
@@ -32,8 +30,6 @@ public class PuzzleNotify : MonoBehaviour
     void Update()
     {
         PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
-
-        //delayTimer -= Time.deltaTime;
-
+        
     }
 }
