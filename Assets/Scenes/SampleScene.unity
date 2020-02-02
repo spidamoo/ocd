@@ -1330,6 +1330,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 805910869}
+        m_MethodName: ToVoicemail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &805910865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3889287092898182241, guid: 365dd1f2898484861adad6bcb1d7e34c,
+    type: 3}
+  m_PrefabInstance: {fileID: 877998511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805910869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805910865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2522c16cc2dde43fbb39a5ef9b4f473a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AlexCallingEvent: event:/Sound design/Phone Ring
+  PlayVoicemailEvent: event:/Sound design/Voicemail
 --- !u!1 &817558395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4816480108614625059, guid: 365dd1f2898484861adad6bcb1d7e34c,
