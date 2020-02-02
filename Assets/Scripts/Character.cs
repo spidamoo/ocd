@@ -74,7 +74,7 @@ public class Character : MonoBehaviour
                     // raycast hit this gameobject
                     Debug.Log("Hit:" + hit.collider.name);
 
-                    var puzzle      = hit.collider.gameObject.GetComponentInChildren<Puzzle>();
+                    var puzzle      = hit.rigidbody ? hit.rigidbody.gameObject.GetComponentInChildren<Puzzle>() : hit.collider.gameObject.GetComponentInChildren<Puzzle>();
                     var phoneAudio  = hit.collider.gameObject.GetComponentInChildren<PhoneAudio>();
 
                     if (puzzle != null)
