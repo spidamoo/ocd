@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,26 +7,50 @@ public class MusicPlayer : MonoBehaviour
 {
 
     [FMODUnity.EventRef] public string AnxietyMusic;
-    //[FMODUnity.EventRef] public string AnxietySoundLayer;
-
     public static FMOD.Studio.EventInstance AnxietyMusicInstance;
-    //public static FMOD.Studio.EventInstance AnxietySoundLayerInstance;
+    public int PuzzleCounter = 1;
+
+    private void Awake()
+    {
+        MusingSingleton()
+    }
+
+
+
 
     void Start()
     {
         AnxietyMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AnxietyMusic);
-        //AnxietySoundLayerInstance = FMODUnity.RuntimeManager.CreateInstance(AnxietySoundLayer);
 
         AnxietyMusicInstance.start();
-        //AnxietySoundLayerInstance.start();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
+    private void MusingSingleton()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(GameObject);
+        }
+    }
+
+
+    public void InitiateNextPuzzle()
+    {
+        PuzzleCounter += 1;
+        Debug.Log("PuzzleCounter: " + PuzzleCounter);
+        ToAnxiety();
+    }
+
 
     public void ToAnxiety()
     {
@@ -39,13 +64,10 @@ public class MusicPlayer : MonoBehaviour
 
 
 
-    //private void OnDestroy()
-    //{
-    //    AnxietyMusicInstance.release();
-    //    //AnxietySoundLayerInstance.release();
-
-    //    AnxietyMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-    //    //AnxietySoundLayerInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-    //}
+    private void OnDestroy()
+    {
+        AnxietyMusicInstance.release();
+        AnxietyMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
 
 }

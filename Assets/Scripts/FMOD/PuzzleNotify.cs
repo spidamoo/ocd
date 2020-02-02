@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle2Notify : MonoBehaviour
+public class PuzzleNotify : MonoBehaviour
 {
 
     [FMODUnity.EventRef] public string PuzzleNotifyEvent;
     FMOD.Studio.EventInstance PuzzleNotifyInstance;
 
-    int PuzzleTrigger;
-
     void Start()
     {
         PuzzleNotifyInstance = FMODUnity.RuntimeManager.CreateInstance(PuzzleNotifyEvent);
-        //PuzzleTrigger = GetComponent<Somewhere>
+        PuzzleNotifyInstance.start();
     }
 
-    public void ComeToPuzzle()
+    public void ComeToMe()
     {
-        if (PuzzleTrigger == 2)
-        {
-            PuzzleNotifyInstance.start();
-        }
+        PuzzleNotifyInstance.release();
+        PuzzleNotifyInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     void Update()
