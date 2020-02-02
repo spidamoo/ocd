@@ -31,7 +31,7 @@ public class PuzzleNotify : MonoBehaviour
 
     public void ComeToMe()
     {
-        PuzzleNotifyInstance.release();
+        //PuzzleNotifyInstance.release();
         PuzzleNotifyInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

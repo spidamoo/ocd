@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnxietyMusic: event:/Music/Anxiety master
+  PlaceMarkerEvent: event:/Sound design/PenScribble
+  PuzzleCounter: 0

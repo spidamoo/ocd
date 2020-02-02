@@ -69,8 +69,11 @@
     <Compile Include="Assets\Scripts\FMOD\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\FMOD\PhoneAudio.cs" />
     <Compile Include="Assets\Scripts\FMOD\PuzzleNotify.cs" />
+    <Compile Include="Assets\Scripts\GameStarter.cs" />
     <Compile Include="Assets\Scripts\Magnet.cs" />
     <Compile Include="Assets\Scripts\Puzzle.cs" />
+    <None Include="Assets\Fonts\lora\OFL.txt" />
+    <None Include="Assets\Fonts\arvo\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/Larsburgwal/GIT repositories/ocd/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
