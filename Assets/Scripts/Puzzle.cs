@@ -9,6 +9,8 @@ public class Puzzle : MonoBehaviour
     public bool solved;
     public UnityEvent startEvent;
     public UnityEvent solvedEvent;
+    public GameObject theObject;
+    public GameObject targetObject;
 
     private int collidedTriggers = 0;
     // Start is called before the first frame update
@@ -50,6 +52,9 @@ public class Puzzle : MonoBehaviour
             solved = true;
             Debug.Log("solved");
             solvedEvent.Invoke();
+
+            Destroy( theObject.GetComponent<Rigidbody>() );
+            theObject.transform.SetPositionAndRotation(targetObject.transform.position, targetObject.transform.rotation);
         }
         else
         {
