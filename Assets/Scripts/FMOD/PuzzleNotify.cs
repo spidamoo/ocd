@@ -8,8 +8,6 @@ public class PuzzleNotify : MonoBehaviour
     [FMODUnity.EventRef] public string PuzzleNotifyEvent;
     FMOD.Studio.EventInstance PuzzleNotifyInstance;
 
-    Transform transformPos = null;
-
     void Start()
     {
         PuzzleNotifyInstance = FMODUnity.RuntimeManager.CreateInstance(PuzzleNotifyEvent);
@@ -18,7 +16,7 @@ public class PuzzleNotify : MonoBehaviour
 
     void Update()
     {
-        PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
+        PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
 
     }
 
