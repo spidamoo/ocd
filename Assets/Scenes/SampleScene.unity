@@ -1803,6 +1803,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8661312402332770125, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -7702181846237412695, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
@@ -1847,6 +1852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5594373079560078625, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -4488761352575474730, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
@@ -1948,6 +1958,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -704190727937631544, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -594094835925579944, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
@@ -1962,6 +1977,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567631532053851519, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530877264106023686, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2947763793819702315, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
@@ -1993,15 +2018,30 @@ PrefabInstance:
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5006396472657075236, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7417167305346179022, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7817063311977442902, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7970322831466219044, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587941002027368515, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9169060595913031904, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
