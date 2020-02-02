@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        dragMask = LayerMask.GetMask("Draggable");
+        dragMask = LayerMask.GetMask("Draggable", "Phone");
     }
 
     // Update is called once per frame
@@ -71,22 +71,31 @@ public class Character : MonoBehaviour
                 var hits = Physics.RaycastAll(ray, Mathf.Infinity, dragMask);
                 foreach (var hit in hits)
                 {
-                    if (!hit.rigidbody)
-                    {
-                        continue;
-                    }
                     // raycast hit this gameobject
                     Debug.Log("Hit:" + hit.collider.name);
 
-                    draggedBody = hit.rigidbody;
-                    dragPoint = draggedBody.transform.InverseTransformPoint(hit.point);
-                    dragDistance = hit.distance;
+                    var puzzle      = hit.collider.gameObject.GetComponentInChildren<Puzzle>();
+                    var phoneAudio  = hit.collider.gameObject.GetComponentInChildren<PhoneAudio>();
 
-                    var puzzle = draggedBody.gameObject.GetComponentInChildren<Puzzle>();
                     if (puzzle != null)
                     {
+                        if (!hit.rigidbody)
+                        {
+                            continue;
+                        }
+
+                        draggedBody = hit.rigidbody;
+                        dragPoint = draggedBody.transform.InverseTransformPoint(hit.point);
+                        dragDistance = hit.distance;
+
                         Debug.Log("Hit puzzle:" + puzzle.name);
                         puzzle.StartSolving();
+                    }
+
+                    if (phoneAudio != null)
+                    {
+                        Debug.Log("Hit phone");
+                        phoneAudio.PlayVoicemail();
                     }
                 }
             }
