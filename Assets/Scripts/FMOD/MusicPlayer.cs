@@ -13,7 +13,7 @@ public class MusicPlayer : MonoBehaviour
     public static FMOD.Studio.EventInstance PlaceMarkerInstance;
 
 
-
+    public int startGame = 0;
     public int PuzzleCounter = 0;
 
     private void Awake()
@@ -51,6 +51,11 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+
+    public void StartGameMusic()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("StartGame", 1f);
+    }
 
     public void InitiateNextPuzzle()
     {
