@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Puzzle : MonoBehaviour
 {
     public List<Collider> colliders;
+    public bool started;
     public bool solved;
     public UnityEvent startEvent;
     public UnityEvent solvedEvent;
@@ -66,6 +67,10 @@ public class Puzzle : MonoBehaviour
 
     public void StartSolving()
     {
+        if (started)
+            return;
+
         startEvent.Invoke();
+        started = true;
     }
 }
