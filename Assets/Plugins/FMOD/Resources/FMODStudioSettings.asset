@@ -80,5 +80,6 @@ MonoBehaviour:
   - Ambience
   - Music
   - Sound Design
+  - UI
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -6,11 +6,13 @@ using FMOD.Studio;
 public class PhoneAudio : MonoBehaviour
 {
 
-    [FMODUnity.EventRef]
-    public string AlexCallingEvent;
-    FMOD.Studio.EventInstance AlexCalling;
-    public string OneNewVoicemailEvent;
-    FMOD.Studio.EventInstance OneNewVoicemail;
+    [FMODUnity.EventRef] public string AlexCallingEvent; 
+    [FMODUnity.EventRef] public string PlayVoicemailEvent;
+
+    FMOD.Studio.EventInstance AlexCallingInstance;
+    FMOD.Studio.EventInstance PlayVoicemailInstance;
+
+    int puzzleCounter = 0;
 
     Transform transformPos = null;
 
@@ -18,9 +20,12 @@ public class PhoneAudio : MonoBehaviour
     {
         transformPos = GetComponent<Transform>();
 
-        AlexCalling = FMODUnity.RuntimeManager.CreateInstance(AlexCallingEvent);
-        AlexCalling.start();
-        AlexCalling.release();
+        AlexCallingInstance = FMODUnity.RuntimeManager.CreateInstance(AlexCallingEvent);
+        PlayVoicemailInstance = FMODUnity.RuntimeManager.CreateInstance(PlayVoicemailEvent);
+
+
+        AlexCallingInstance.start();
+        AlexCallingInstance.release();
         //FMODUnity.RuntimeManager.PlayOneShotAttached(EventPath, gameObject);
     }
 
@@ -28,13 +33,46 @@ public class PhoneAudio : MonoBehaviour
 
     void Update()
     {
-        AlexCalling.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
+        AlexCallingInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
+        PlayVoicemailInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
 
-        if (Input.GetKey(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Debug.Log("v pressed");
-            AlexCalling.setParameterByName("ToVoicemail", 1f);
-
+            puzzleCounter += 1;
+            Debug.Log("puzzlecounter: " + puzzleCounter);
         }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
+            PlayVoicemail();
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            StopVoicemail();
+        }
+
     }
+
+    public void ToVoicemail()
+    {
+        AlexCallingInstance.setParameterByName("ToVoicemail", 1f);
+    }
+
+    public void PlayVoicemail()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
+        PlayVoicemailInstance.start();
+        //PlayVoicemailInstance.release();
+
+    }
+
+    public void StopVoicemail()
+    {
+        //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
+        PlayVoicemailInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
 }

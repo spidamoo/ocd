@@ -14,7 +14,6 @@ public class CityAmbience : MonoBehaviour
     {
         CityAmb = FMODUnity.RuntimeManager.CreateInstance(EventPath);
         CityAmb.start();
-        CityAmb.release();
     }
 
     private void Start()
@@ -29,6 +28,7 @@ public class CityAmbience : MonoBehaviour
 
     private void OnDestroy()
     {
+        CityAmb.release();
         CityAmb.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
