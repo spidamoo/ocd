@@ -71,6 +71,10 @@ public class Character : MonoBehaviour
                 var hits = Physics.RaycastAll(ray, Mathf.Infinity, dragMask);
                 foreach (var hit in hits)
                 {
+                    if (!hit.rigidbody)
+                    {
+                        continue;
+                    }
                     // raycast hit this gameobject
                     Debug.Log("Hit:" + hit.collider.name);
 
