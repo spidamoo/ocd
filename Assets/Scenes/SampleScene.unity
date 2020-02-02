@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1522,6 +1522,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 877998511}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &805910866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805910865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0015728783, y: 0.0010109232, z: 0.00009035645}
+  m_Center: {x: 0, y: 6.9849193e-10, z: -2.983142e-10}
 --- !u!114 &805910869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,6 +1798,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8661312402332770125, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7702181846237412695, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
@@ -1798,6 +1816,11 @@ PrefabInstance:
     - target: {fileID: -5850567003528573640, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5594373079560078625, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -1895,9 +1918,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3889287092898182241, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4224801822505238522, guid: 365dd1f2898484861adad6bcb1d7e34c,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006396472657075236, guid: 365dd1f2898484861adad6bcb1d7e34c,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7970322831466219044, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -4595,35 +4628,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097059897}
   m_Mesh: {fileID: -1353844562764722478, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
---- !u!1 &2111540021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8274873701517981592, guid: 365dd1f2898484861adad6bcb1d7e34c,
-    type: 3}
-  m_PrefabInstance: {fileID: 877998511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2111540025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111540021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Ambience/Light Buzz
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.6
-  OverrideMaxDistance: 1.56
 --- !u!1 &2132916227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4830880941113264117, guid: 365dd1f2898484861adad6bcb1d7e34c,
