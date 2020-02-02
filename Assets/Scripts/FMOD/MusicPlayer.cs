@@ -8,6 +8,12 @@ public class MusicPlayer : MonoBehaviour
 
     [FMODUnity.EventRef] public string AnxietyMusic;
     public static FMOD.Studio.EventInstance AnxietyMusicInstance;
+
+    [FMODUnity.EventRef] public string PlaceMarkerEvent;
+    public static FMOD.Studio.EventInstance PlaceMarkerInstance;
+
+
+
     public int PuzzleCounter = 0;
 
     private void Awake()
@@ -21,6 +27,8 @@ public class MusicPlayer : MonoBehaviour
     void Start()
     {
         AnxietyMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AnxietyMusic);
+        PlaceMarkerInstance = FMODUnity.RuntimeManager.CreateInstance(PlaceMarkerEvent);
+
 
         AnxietyMusicInstance.start();
 
@@ -60,6 +68,12 @@ public class MusicPlayer : MonoBehaviour
     public void ToRelief()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 0f);
+    }
+
+
+    public void PlacePen()
+    {
+        PlaceMarkerInstance.start();
     }
 
 
