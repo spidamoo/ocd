@@ -6,3 +6,4 @@ fmod_editor.log
 **/FMODStudioCache.asset
 **/.csproj
 **/.sln
+.vs
