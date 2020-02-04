@@ -4,7 +4,8 @@ Library
 fmod_editor.log
 **/.DS_Store
 **/FMODStudioCache.asset
-**/.csproj
-**/.sln
+**/*.csproj
+**/*.sln
+**/*.cache
 .vs
 Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta
