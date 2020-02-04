@@ -5,8 +5,8 @@ using UnityEngine;
 public class AmbiencePlayer : MonoBehaviour
 {
 
-    [FMODUnity.EventRef] public string EventPath;
-    FMOD.Studio.EventInstance RoomTone;
+    [FMODUnity.EventRef] public string RoomToneEvent;
+    FMOD.Studio.EventInstance RoomToneInstance;
 
     [FMODUnity.EventRef] public string PenScribbleEvent;
     FMOD.Studio.EventInstance PenScribbleInstance;
@@ -14,8 +14,8 @@ public class AmbiencePlayer : MonoBehaviour
 
     private void Awake()
     {
-        RoomTone = FMODUnity.RuntimeManager.CreateInstance(EventPath);
-        RoomTone.start();
+        RoomToneInstance = FMODUnity.RuntimeManager.CreateInstance(RoomToneEvent);
+        RoomToneInstance.start();
 
         PenScribbleInstance = FMODUnity.RuntimeManager.CreateInstance(PenScribbleEvent);
         PenScribbleInstance.start();
@@ -29,6 +29,6 @@ public class AmbiencePlayer : MonoBehaviour
 
     private void OnDestroy()
     {
-        RoomTone.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        RoomToneInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

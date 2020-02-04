@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class CityAmbience : MonoBehaviour
 {
-    [FMODUnity.EventRef]
-    public string EventPath;
-    FMOD.Studio.EventInstance CityAmb;
+    [FMODUnity.EventRef] public string CityAmbienceEvent;
+    FMOD.Studio.EventInstance CityAmbienceInstance;
 
-    Transform transformPos = null;
+    //Transform transformPos = null;
 
     private void Awake()
     {
-        CityAmb = FMODUnity.RuntimeManager.CreateInstance(EventPath);
-        CityAmb.start();
     }
 
     private void Start()
     {
-        transformPos = GetComponent<Transform>();
+        CityAmbienceInstance = FMODUnity.RuntimeManager.CreateInstance(CityAmbienceEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(CityAmbienceInstance, transform, GetComponent<Rigidbody>());
+        CityAmbienceInstance.start();
+
+        //transformPos = GetComponent<Transform>();
     }
 
     void Update()
     {
-        CityAmb.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
+        //CityAmbienceInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
     }
 
     private void OnDestroy()
     {
         //CityAmb.release();
-        CityAmb.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        CityAmbienceInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

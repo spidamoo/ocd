@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44659364, g: 0.4964301, b: 0.5748256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8c58d0503f04f47818343029d51469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventPath: event:/Ambience/Room tone
+  RoomToneEvent: 
   PenScribbleEvent: 
 --- !u!1 &202014363
 GameObject:
@@ -212,6 +212,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuzzleNotifyEvent: event:/UI/Puzzle Notify
+--- !u!4 &204219012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2652273568656409886, guid: 365dd1f2898484861adad6bcb1d7e34c,
+    type: 3}
+  m_PrefabInstance: {fileID: 877998511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217937810
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +296,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217937810}
   m_Mesh: {fileID: 2303995291508873528, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
+--- !u!1 &289229401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6818094716102994598, guid: 365dd1f2898484861adad6bcb1d7e34c,
+    type: 3}
+  m_PrefabInstance: {fileID: 877998511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &289229402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289229401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47ec0efaf42648f9a486a45b9dff714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &289229403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289229401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018, y: 0.013778157, z: 0.05}
+  m_Center: {x: -0.0019, y: 0.0059, z: -0.01}
 --- !u!1 &325649540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1402549672601794153, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -689,10 +726,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 550480688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbab18f9bd6d4f2ea70965949b57418, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventPath: event:/Ambience/City ambience
+  CollisionTag: 
+  Event: event:/Ambience/City ambience
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2
 --- !u!1 &553669851
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1035,7 @@ GameObject:
   - component: {fileID: 663341573}
   - component: {fileID: 663341572}
   - component: {fileID: 663341571}
+  - component: {fileID: 663341574}
   m_Layer: 0
   m_Name: Pen_Blue
   m_TagString: Untagged
@@ -1068,6 +1116,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663341569}
   m_Mesh: {fileID: 3518785448033176185, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
+--- !u!114 &663341574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663341569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Sound design/PenScribble
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &667518264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2904,60 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000001, y: 0.020000001, z: 0.15338184}
   m_Center: {x: 0.0000000023979683, y: 0.000000002397965, z: 0.08046239}
+--- !u!1 &1224562044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224562045}
+  - component: {fileID: 1224562046}
+  m_Layer: 0
+  m_Name: Blinder001Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1224562045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224562044}
+  m_LocalRotation: {x: 0.46915984, y: -0, z: -0, w: 0.88311327}
+  m_LocalPosition: {x: -0.03618, y: 0.023, z: 0.11}
+  m_LocalScale: {x: 0.016418448, y: 1.9316839, z: 1.0139747}
+  m_Children: []
+  m_Father: {fileID: 204219012}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1224562046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224562044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Ambience/City ambience
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2
 --- !u!1 &1232160430
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,49 +12,20 @@ public class PhoneAudio : MonoBehaviour
     FMOD.Studio.EventInstance AlexCallingInstance;
     FMOD.Studio.EventInstance PlayVoicemailInstance;
 
-    //int puzzleCounter = 0;
-
-    Transform transformPos = null;
 
     void Start()
     {
-        transformPos = GetComponent<Transform>();
-
         AlexCallingInstance = FMODUnity.RuntimeManager.CreateInstance(AlexCallingEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(AlexCallingInstance, transform, GetComponent<Rigidbody>());
+    
         PlayVoicemailInstance = FMODUnity.RuntimeManager.CreateInstance(PlayVoicemailEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(PlayVoicemailInstance, transform, GetComponent<Rigidbody>());
 
 
         AlexCallingInstance.start();
-        //AlexCallingInstance.release();
-        //FMODUnity.RuntimeManager.PlayOneShotAttached(EventPath, gameObject);
+        AlexCallingInstance.release();
     }
 
-
-
-    void Update()
-    {
-        AlexCallingInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
-        PlayVoicemailInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transformPos));
-
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    puzzleCounter += 1;
-        //    Debug.Log("puzzlecounter: " + puzzleCounter);
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.V))
-        //{
-        //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
-        //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
-        //    PlayVoicemail();
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    StopVoicemail();
-        //}
-
-    }
 
     public void ToVoicemail()
     {
@@ -63,19 +34,15 @@ public class PhoneAudio : MonoBehaviour
 
     public void PlayVoicemail()
     {
-        //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 1f);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
 
-
         PlayVoicemailInstance.start();
-        //PlayVoicemailInstance.release();
 
     }
 
     public void StopVoicemail()
     {
-        //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", puzzleCounter);
         PlayVoicemailInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
