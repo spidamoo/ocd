@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum LookMode {Free, Locked};
+public enum CursorMode {Normal, Highlight, Dragging};
 
 public class Character : MonoBehaviour
 {
@@ -16,20 +18,25 @@ public class Character : MonoBehaviour
     public float force = 10.0f;
     public bool inTutorial = true;
     public GameObject crosshair;
+    public Text exitText;
 
     private CharacterController controller;
     private Vector2 currentRotation = new Vector2(-89.14001f, -54.945f);
     private LayerMask dragMask;
     private LookMode lookMode = LookMode.Free;
+    private CursorMode cursorMode = CursorMode.Normal;
     private bool ignoreMouseMove = false;
     private Rigidbody draggedBody;
     private Vector3   dragPoint;
     private float     dragDistance;
+    private float exitTimer;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         dragMask = LayerMask.GetMask("Draggable", "Phone");
+
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -62,60 +69,95 @@ public class Character : MonoBehaviour
             transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
         }
 
-        if ( Input.GetMouseButton(0) )
+        if (draggedBody == null)
         {
-            if (draggedBody == null)
+            cursorMode = CursorMode.Normal;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+           
+            var hits = Physics.RaycastAll(ray, Mathf.Infinity, dragMask);
+            foreach (var hit in hits)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-               
-                var hits = Physics.RaycastAll(ray, Mathf.Infinity, dragMask);
-                foreach (var hit in hits)
+                cursorMode = CursorMode.Highlight;
+
+                if ( !Input.GetMouseButtonDown(0) )
+                    continue;
+
+                // raycast hit this gameobject
+                Debug.Log("Hit:" + hit.collider.name);
+
+                var puzzle      = hit.rigidbody ? hit.rigidbody.gameObject.GetComponentInChildren<Puzzle>() : hit.collider.gameObject.GetComponentInChildren<Puzzle>();
+                var phoneAudio  = hit.collider.gameObject.GetComponentInChildren<PhoneAudio>();
+
+                if (puzzle != null)
                 {
-                    // raycast hit this gameobject
-                    Debug.Log("Hit:" + hit.collider.name);
-
-                    var puzzle      = hit.rigidbody ? hit.rigidbody.gameObject.GetComponentInChildren<Puzzle>() : hit.collider.gameObject.GetComponentInChildren<Puzzle>();
-                    var phoneAudio  = hit.collider.gameObject.GetComponentInChildren<PhoneAudio>();
-
-                    if (puzzle != null)
+                    if (!hit.rigidbody)
                     {
-                        if (!hit.rigidbody)
-                        {
-                            continue;
-                        }
-
-                        draggedBody = hit.rigidbody;
-                        dragPoint = draggedBody.transform.InverseTransformPoint(hit.point);
-                        dragDistance = hit.distance;
-
-                        Debug.Log("Hit puzzle:" + puzzle.name);
-                        puzzle.StartSolving();
+                        continue;
                     }
 
-                    if (phoneAudio != null)
-                    {
-                        Debug.Log("Hit phone");
-                        phoneAudio.PlayVoicemail();
-                    }
+                    draggedBody = hit.rigidbody;
+                    dragPoint = draggedBody.transform.InverseTransformPoint(hit.point);
+                    dragDistance = hit.distance;
+
+                    Debug.Log("Hit puzzle:" + puzzle.name);
+                    puzzle.StartSolving();
                 }
-            }
-            else
-            {
-                Vector3 desiredPosition = Camera.main.ScreenPointToRay(Input.mousePosition).GetPoint(dragDistance);
-                // Debug.Log(string.Format("drag {0} {1}", draggedBody.transform.position, desiredPosition));
-                // draggedBody.MovePosition(desiredPosition);
-                Vector3 worldDragPoint = draggedBody.transform.TransformPoint(dragPoint);
-                draggedBody.AddForceAtPosition(
-                    force * (desiredPosition - worldDragPoint), worldDragPoint, ForceMode.Force
-                );
+
+                if (phoneAudio != null)
+                {
+                    Debug.Log("Hit phone");
+                    phoneAudio.PlayVoicemail();
+                }
             }
         }
         else
         {
-            if (draggedBody != null)
-            {
+            Vector3 desiredPosition = Camera.main.ScreenPointToRay(Input.mousePosition).GetPoint(dragDistance);
+            // Debug.Log(string.Format("drag {0} {1}", draggedBody.transform.position, desiredPosition));
+            // draggedBody.MovePosition(desiredPosition);
+            Vector3 worldDragPoint = draggedBody.transform.TransformPoint(dragPoint);
+            draggedBody.AddForceAtPosition(
+                force * (desiredPosition - worldDragPoint), worldDragPoint, ForceMode.Force
+            );
+
+            cursorMode = CursorMode.Dragging;
+
+            if ( !Input.GetMouseButton(0) )
                 draggedBody = null;
+        }
+
+        switch (cursorMode)
+        {
+            case CursorMode.Normal:
+                crosshair.GetComponent<Image>().color = Color.white;
+                break;
+            case CursorMode.Highlight:
+                crosshair.GetComponent<Image>().color = Color.green;
+                break;
+            case CursorMode.Dragging:
+                crosshair.GetComponent<Image>().color = Color.blue;
+                break;
+        }
+
+        crosshair.GetComponent<RectTransform>().anchoredPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        if (exitTimer > 0.0f)
+        {
+            exitTimer -= Time.deltaTime;
+            exitText.color = Color.white;
+            if ( Input.GetKey ("escape") )
+            {
+                Application.Quit();
             }
+        }
+        else
+        {
+            if ( Input.GetKey ("escape") )
+            {
+                exitTimer = 1.0f;
+            }
+            exitText.color = Color.clear;
         }
     }
 
@@ -130,7 +172,7 @@ public class Character : MonoBehaviour
         {
             case LookMode.Free:
                 Cursor.lockState = CursorLockMode.None;
-                crosshair.SetActive(false);
+                crosshair.SetActive(true);
                 break;
             case LookMode.Locked:
                 Cursor.lockState = CursorLockMode.Locked;

@@ -20,5 +20,10 @@ public class GameStarter : MonoBehaviour
         {
             SceneManager.LoadScene("SampleScene");
         }
+
+        if ( Input.GetKey ("escape") )
+        {
+            Application.Quit();
+        }
     }
 }
