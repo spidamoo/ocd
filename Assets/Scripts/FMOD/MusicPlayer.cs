@@ -7,13 +7,13 @@ public class MusicPlayer : MonoBehaviour
 {
 
     [FMODUnity.EventRef] public string AnxietyMusic;
+    [FMODUnity.EventRef] public string PlaceMarkerEvent;
+
+    public static FMOD.Studio.EventInstance PlaceMarkerInstance;
     public static FMOD.Studio.EventInstance AnxietyMusicInstance;
 
-    [FMODUnity.EventRef] public string PlaceMarkerEvent;
-    public static FMOD.Studio.EventInstance PlaceMarkerInstance;
-
-
     //public int startGame = 0;
+
     public int PuzzleCounter = 1;
     public PhoneAudio phoneAudio;
 
@@ -21,8 +21,6 @@ public class MusicPlayer : MonoBehaviour
     //{
     //    //MusingSingleton();
     //}
-
-
 
 
     void Start()
@@ -60,7 +58,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void InitiateNextPuzzle()
     {
-        PuzzleCounter += 1;
+        PuzzleCounter++;
         Debug.Log("PuzzleCounter: " + PuzzleCounter);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", PuzzleCounter);
         //ToAnxiety();
