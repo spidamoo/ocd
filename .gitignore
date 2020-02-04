@@ -7,3 +7,4 @@ fmod_editor.log
 **/.csproj
 **/.sln
 .vs
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta
