@@ -7,6 +7,8 @@ public class PuzzleNotify : MonoBehaviour
 
     [FMODUnity.EventRef] public string PuzzleNotifyEvent;
     FMOD.Studio.EventInstance PuzzleNotifyInstance;
+    private bool isNotifying = false;
+    private float notifyDelay;
 
     void Start()
     {
@@ -17,19 +19,39 @@ public class PuzzleNotify : MonoBehaviour
     void Update()
     {
         PuzzleNotifyInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform));
+        if (isNotifying)
+        {
+            if (notifyDelay < 0.0f)
+            {
+                NotifyMe();
+                ResetTimer();
+            }
 
+            notifyDelay -= Time.deltaTime;
+        }
+    }
+
+    private void ResetTimer()
+    {
+        notifyDelay = Random.Range(1.0f, 1.0f);
     }
 
 
-    public void NotifyMe()
+    private void NotifyMe()
     {
         PuzzleNotifyInstance.start();
     }
 
-
-    public void ComeToMe()
+    public void StartNotifying()
     {
-        //PuzzleNotifyInstance.release();
+        isNotifying = true;
+        ResetTimer();
+    }
+
+
+    public void StopNotifying()
+    {
+        isNotifying = false;
         PuzzleNotifyInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

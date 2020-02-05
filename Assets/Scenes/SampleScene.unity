@@ -173,6 +173,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 877998511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &132704653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132704654}
+  - component: {fileID: 132704655}
+  m_Layer: 0
+  m_Name: NotifyObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &132704654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132704653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.853, y: 1.559, z: -0.777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 202014364}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &132704655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132704653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &202014363
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +226,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202014364}
-  - component: {fileID: 202014365}
   m_Layer: 0
   m_Name: Puzzle 2 (jars)
   m_TagString: Untagged
@@ -204,22 +247,10 @@ Transform:
   - {fileID: 1427650431}
   - {fileID: 835391850}
   - {fileID: 1835825149}
+  - {fileID: 132704654}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &202014365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202014363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!4 &204219012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2652273568656409886, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -1104,6 +1135,7 @@ Transform:
   - {fileID: 499841084}
   - {fileID: 1893938502}
   - {fileID: 1581144744}
+  - {fileID: 1256109504}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1709,6 +1741,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 132704655}
+        m_MethodName: StartNotifying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1530491824}
+        m_MethodName: StartNotifying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1256109505}
+        m_MethodName: StartNotifying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   theObject: {fileID: 803477357}
   targetObject: {fileID: 1849008189}
 --- !u!1 &805910865 stripped
@@ -1924,7 +1989,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1783400317}
+      - m_Target: {fileID: 0}
         m_MethodName: ComeToMe
         m_Mode: 1
         m_Arguments:
@@ -1937,6 +2002,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
         m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1530491824}
+        m_MethodName: StopNotifying
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3369,7 +3445,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 202014365}
+      - m_Target: {fileID: 0}
         m_MethodName: ComeToMe
         m_Mode: 1
         m_Arguments:
@@ -3382,6 +3458,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
         m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 132704655}
+        m_MethodName: StopNotifying
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3932,6 +4019,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232160430}
   m_Mesh: {fileID: -5052960495078603965, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
+--- !u!1 &1256109503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256109504}
+  - component: {fileID: 1256109505}
+  m_Layer: 0
+  m_Name: NotifySound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1256109504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256109503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.433, y: 0.902, z: -2.896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 654400151}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256109505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256109503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &1275482191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4131,6 +4262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PenScribbleEvent: event:/Sound design/PenScribble
+  PenCapEvent: event:/Sound design/CapOnPen
+  PenOnFridgeEvent: event:/Sound design/PenOnFridge
 --- !u!1 &1316152015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4502,6 +4635,50 @@ Transform:
   m_Father: {fileID: 202014364}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1530491822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530491823}
+  - component: {fileID: 1530491824}
+  m_Layer: 0
+  m_Name: NotifySound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530491823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530491822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.032, y: 1.646, z: -0.441}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1783400316}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530491824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530491822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &1538491112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,7 +5221,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783400316}
-  - component: {fileID: 1783400317}
   m_Layer: 0
   m_Name: Puzzle 3 (painting)
   m_TagString: Untagged
@@ -5066,22 +5242,10 @@ Transform:
   - {fileID: 1951869082}
   - {fileID: 1676205820}
   - {fileID: 1316152016}
+  - {fileID: 1530491823}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1783400317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783400315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5258068128c46c982b2e1d6de38e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PuzzleNotifyEvent: event:/UI/Puzzle Notify
 --- !u!1 &1835825148
 GameObject:
   m_ObjectHideFlags: 0
@@ -5655,7 +5819,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654400152}
+      - m_Target: {fileID: 0}
         m_MethodName: ComeToMe
         m_Mode: 1
         m_Arguments:
@@ -5668,6 +5832,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
         m_MethodName: InitiateNextPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1256109505}
+        m_MethodName: StopNotifying
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
