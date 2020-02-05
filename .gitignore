@@ -9,6 +9,4 @@ fmod_editor.log
 **/*.cache
 .vs
 Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta
-*.csproj
-*.sln
-*.cache
+obj
