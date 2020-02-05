@@ -106,8 +106,13 @@ public class Character : MonoBehaviour
                     puzzle.StartSolving();
                 }
 
-                if (phoneAudio != null)
+                float voicemail;
+
+                FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
+                if (phoneAudio != null && voicemail < 0.5f)
                 {
+                    //setParameterByName("Voicemail", 1f);
+
                     Debug.Log("Hit phone");
                     phoneAudio.PlayVoicemail();
                 }

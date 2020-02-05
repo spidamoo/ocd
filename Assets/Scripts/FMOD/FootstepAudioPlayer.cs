@@ -19,7 +19,7 @@ public class FootstepAudioPlayer : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Character velocity: " + characterController.velocity.magnitude);
+        //Debug.Log("Character velocity: " + characterController.velocity.magnitude);
 
         FootstepsInstance.getPlaybackState(out FootstepsState);
 
