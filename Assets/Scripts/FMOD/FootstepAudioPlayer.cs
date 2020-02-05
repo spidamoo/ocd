@@ -9,6 +9,8 @@ public class FootstepAudioPlayer : MonoBehaviour
     FMOD.Studio.EventInstance FootstepsInstance;
     private FMOD.Studio.PLAYBACK_STATE FootstepsState;
 
+    public CharacterController characterController;
+
 
     void Start()
     {
@@ -17,12 +19,15 @@ public class FootstepAudioPlayer : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Character velocity: " + characterController.velocity.magnitude);
+
         FootstepsInstance.getPlaybackState(out FootstepsState);
 
         if (FootstepsState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
 
-            if (Input.GetKeyUp(KeyCode.W) | Input.GetKeyUp(KeyCode.A) | Input.GetKeyUp(KeyCode.S) | Input.GetKeyUp(KeyCode.D))
+            //if (Input.GetKeyUp(KeyCode.W) | Input.GetKeyUp(KeyCode.A) | Input.GetKeyUp(KeyCode.S) | Input.GetKeyUp(KeyCode.D))
+            if (characterController.velocity.magnitude < Mathf.Epsilon)
 
             {
                 FootstepsInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -30,19 +35,11 @@ public class FootstepAudioPlayer : MonoBehaviour
 
         }
 
-        else if (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.S) | Input.GetKey(KeyCode.D))
+        //else if (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.S) | Input.GetKey(KeyCode.D))
+
+        else if (characterController.velocity.magnitude > Mathf.Epsilon)
         {
             FootstepsInstance.start();
-            //FootstepsInstance.release();
         }
-
-        //    else if (Input.GetKeyUp(KeyCode.W) | Input.GetKeyUp(KeyCode.A) | Input.GetKeyUp(KeyCode.S) | Input.GetKeyUp(KeyCode.D))
-
-        //    {
-        //        FootstepsInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //    }
-
-        //}
-
     }
 }

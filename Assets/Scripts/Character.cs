@@ -50,8 +50,10 @@ public class Character : MonoBehaviour
         {
             SetLookMode(LookMode.Locked);
 
-            controller.SimpleMove( Input.GetAxis("Vertical") * transform.forward * speed );
-            controller.SimpleMove( Input.GetAxis("Horizontal") * transform.right * speed );
+            controller.SimpleMove(
+                Input.GetAxis("Vertical") * transform.forward * speed +
+                Input.GetAxis("Horizontal") * transform.right * speed
+            );
 
             float mouseXmove = Input.GetAxis("Mouse X");
             float mouseYmove = Input.GetAxis("Mouse Y");
