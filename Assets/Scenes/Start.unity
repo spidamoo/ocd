@@ -755,7 +755,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Hi, this is Rosaline's voicemail. So you know what that means. Leave a message
-    after the beep and I'll call you back later. Bye.
+    after the beep and I'll call you back later.
 --- !u!222 &1436179651
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hi Rosie, or ehm... Good day, I guess... It's Alex.
+  m_Text: Hey Rosie, this is Alex. So, ehm, good day, I guess... How're you doing?
 --- !u!222 &1491464545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IntroAudioEvent: event:/Music/Anxiety intro
+  MouseClickEvent: event:/Sound design/IntroClick
 --- !u!4 &1611642358
 Transform:
   m_ObjectHideFlags: 0

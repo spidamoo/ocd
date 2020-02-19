@@ -3868,6 +3868,35 @@ Transform:
   m_Father: {fileID: 1698367933}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1089887907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2849113120483850092, guid: 365dd1f2898484861adad6bcb1d7e34c,
+    type: 3}
+  m_PrefabInstance: {fileID: 877998511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1089887908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089887907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Sound design/VinylPlayer
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2.9
 --- !u!1 &1165441784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7702181846237412695, guid: 365dd1f2898484861adad6bcb1d7e34c,

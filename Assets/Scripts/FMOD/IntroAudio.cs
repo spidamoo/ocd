@@ -9,6 +9,9 @@ public class IntroAudio : MonoBehaviour
     [FMODUnity.EventRef] public string IntroAudioEvent;
     public static FMOD.Studio.EventInstance IntroAudioInstance;
 
+    [FMODUnity.EventRef] public string MouseClickEvent;
+    //FMOD.Studio.EventInstance MouseClickInstance;
+
     //[FMODUnity.EventRef] public string PlaceMarkerEvent;
     //public static FMOD.Studio.EventInstance PlaceMarkerInstance;
 
@@ -28,6 +31,7 @@ public class IntroAudio : MonoBehaviour
     void Start()
     {
         IntroAudioInstance = FMODUnity.RuntimeManager.CreateInstance(IntroAudioEvent);
+        //MouseClickInstance = FMODUnity.RuntimeManager.CreateInstance(MouseClickEvent);
         //PlaceMarkerInstance = FMODUnity.RuntimeManager.CreateInstance(PlaceMarkerEvent);
 
 
@@ -37,6 +41,10 @@ public class IntroAudio : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(MouseClickEvent);
+        }
 
     }
 

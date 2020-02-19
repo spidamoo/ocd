@@ -12,13 +12,8 @@ public class MusicPlayer : MonoBehaviour
 
     //public int startGame = 0;
 
-    public int PuzzleCounter = 1;
+    public int PuzzleCounter = -1;
     public PhoneAudio phoneAudio;
-
-    //private void Awake()
-    //{
-    //    //MusingSingleton();
-    //}
 
 
     void Start()
@@ -33,23 +28,6 @@ public class MusicPlayer : MonoBehaviour
         
     }
 
-    //private void MusingSingleton()
-    //{
-    //    if (FindObjectsOfType(GetType()).Length > 1)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //}
-
-
-    //public void StartGameMusic()
-    //{
-    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("StartGame", 1f);
-    //}
 
     public void InitiateNextPuzzle()
     {
