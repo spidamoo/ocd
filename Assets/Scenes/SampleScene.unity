@@ -165,8 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8c58d0503f04f47818343029d51469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoomToneEvent: 
-  PenScribbleEvent: 
+  RoomToneEvent: event:/Ambience/Room tone
 --- !u!1 &103179481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8938866556569923485, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -1682,18 +1681,7 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1859655693}
-        m_MethodName: InitiateNextPuzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   solvedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3087,9 +3075,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 0
+  OverrideAttenuation: 1
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 6.08
 --- !u!1 &877998514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -788842475722673760, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -3887,7 +3875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Sound design/VinylPlayer
+  Event: event:/Ambience/VinylPlayer
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
@@ -3896,7 +3884,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2.9
+  OverrideMaxDistance: 10.2
 --- !u!1 &1165441784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7702181846237412695, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -6227,6 +6215,11 @@ PrefabInstance:
       propertyPath: phoneAudio
       value: 
       objectReference: {fileID: 805910869}
+    - target: {fileID: 8298787326787618642, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
+        type: 3}
+      propertyPath: MasterAudioEvent
+      value: event:/MASTER PLAYOUT/GAMEPLAY_MASTER
+      objectReference: {fileID: 0}
     - target: {fileID: 8298787326787618643, guid: aa8b5bc66dbc64d3a90a8ec391ec45fe,
         type: 3}
       propertyPath: m_LocalPosition.x
