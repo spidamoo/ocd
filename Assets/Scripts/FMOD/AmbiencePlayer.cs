@@ -8,8 +8,8 @@ public class AmbiencePlayer : MonoBehaviour
     [FMODUnity.EventRef] public string RoomToneEvent;
     FMOD.Studio.EventInstance RoomToneInstance;
 
-    [FMODUnity.EventRef] public string PenScribbleEvent;
-    FMOD.Studio.EventInstance PenScribbleInstance;
+    //[FMODUnity.EventRef] public string PenScribbleEvent;
+    //FMOD.Studio.EventInstance PenScribbleInstance;
 
 
     private void Awake()
@@ -17,15 +17,15 @@ public class AmbiencePlayer : MonoBehaviour
         RoomToneInstance = FMODUnity.RuntimeManager.CreateInstance(RoomToneEvent);
         RoomToneInstance.start();
 
-        PenScribbleInstance = FMODUnity.RuntimeManager.CreateInstance(PenScribbleEvent);
-        PenScribbleInstance.start();
+        //PenScribbleInstance = FMODUnity.RuntimeManager.CreateInstance(PenScribbleEvent);
+        //PenScribbleInstance.start();
         //PenScribbleInstance.release();
     }
 
-    void Update()
-    {
+    //void Update()
+    //{
         
-    }
+    //}
 
     private void OnDestroy()
     {

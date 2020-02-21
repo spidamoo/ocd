@@ -465,7 +465,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1611642357}
-        m_MethodName: StartGameMusic
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 1588725670}
   - component: {fileID: 1588725669}
   - component: {fileID: 1588725668}
+  - component: {fileID: 1588725671}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -866,7 +867,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588725667}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1588725669
 Camera:
   m_ObjectHideFlags: 0
@@ -924,6 +925,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588725671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588725667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1611642356
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,8 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b44a5e88ed8c42b7836f33cb52d9085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntroAudioEvent: event:/Music/Anxiety intro
-  MouseClickEvent: event:/Sound design/IntroClick
+  IntroAudioEvent: event:/MASTER PLAYOUT/START_SCREEN_MASTER
 --- !u!4 &1611642358
 Transform:
   m_ObjectHideFlags: 0

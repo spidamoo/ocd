@@ -9,92 +9,30 @@ public class IntroAudio : MonoBehaviour
     [FMODUnity.EventRef] public string IntroAudioEvent;
     public static FMOD.Studio.EventInstance IntroAudioInstance;
 
-    [FMODUnity.EventRef] public string MouseClickEvent;
-    //FMOD.Studio.EventInstance MouseClickInstance;
-
-    //[FMODUnity.EventRef] public string PlaceMarkerEvent;
-    //public static FMOD.Studio.EventInstance PlaceMarkerInstance;
-
-
-    //public int startGame = 0;
-    //public int PuzzleCounter = 1;
-    //public PhoneAudio phoneAudio;
-
-    //private void Awake()
-    //{
-    //    //MusingSingleton();
-    //}
-
-
+    //[FMODUnity.EventRef] public string MouseClickEvent;
 
 
     void Start()
     {
         IntroAudioInstance = FMODUnity.RuntimeManager.CreateInstance(IntroAudioEvent);
-        //MouseClickInstance = FMODUnity.RuntimeManager.CreateInstance(MouseClickEvent);
-        //PlaceMarkerInstance = FMODUnity.RuntimeManager.CreateInstance(PlaceMarkerEvent);
-
-
         IntroAudioInstance.start();
 
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(MouseClickEvent);
-        }
-
-    }
-
-    //private void MusingSingleton()
+    //void Update()
     //{
-    //    if (FindObjectsOfType(GetType()).Length > 1)
+    //    if (Input.GetMouseButtonDown(0))
     //    {
-    //        Destroy(gameObject);
+    //        FMODUnity.RuntimeManager.PlayOneShot(MouseClickEvent);
     //    }
-    //    else
-    //    {
-    //        DontDestroyOnLoad(gameObject);
-    //    }
+
     //}
 
 
-    public void StartGameMusic()
+    public void StartGame()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("StartGame", 1f);
     }
-
-    //public void InitiateNextPuzzle()
-    //{
-    //    PuzzleCounter += 1;
-    //    Debug.Log("PuzzleCounter: " + PuzzleCounter);
-    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", PuzzleCounter);
-    //    //ToAnxiety();
-    //}
-
-
-    //public void ToAnxiety()
-    //{
-    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 1f);
-    //}
-
-    //public void ToRelief()
-    //{
-
-    //    phoneAudio.StopVoicemail();
-    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Anxiety", 0f);
-    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Voicemail", 0f);
-
-    //}
-
-
-    //public void PlacePen()
-    //{
-    //    PlaceMarkerInstance.start();
-    //}
-
 
 
     private void OnDestroy()

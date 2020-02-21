@@ -6,20 +6,20 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
 
-    [FMODUnity.EventRef] public string AnxietyMusic;
+    [FMODUnity.EventRef] public string MasterAudioEvent;
 
-    public static FMOD.Studio.EventInstance AnxietyMusicInstance;
+    public static FMOD.Studio.EventInstance GameplayMasterInstance;
 
     //public int startGame = 0;
 
-    public int PuzzleCounter = -1;
+    public int PuzzleCounter = 0;
     public PhoneAudio phoneAudio;
 
 
     void Start()
     {
-        AnxietyMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AnxietyMusic);
-        AnxietyMusicInstance.start();
+        GameplayMasterInstance = FMODUnity.RuntimeManager.CreateInstance(MasterAudioEvent);
+        GameplayMasterInstance.start();
 
     }
 
@@ -53,17 +53,10 @@ public class MusicPlayer : MonoBehaviour
     }
 
 
-    //public void PlacePen()
-    //{
-    //    PlaceMarkerInstance.start();
-    //}
-
-
-
     private void OnDestroy()
     {
         //AnxietyMusicInstance.release();
-        AnxietyMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        GameplayMasterInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
 }
