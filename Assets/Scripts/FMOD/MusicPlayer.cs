@@ -52,6 +52,23 @@ public class MusicPlayer : MonoBehaviour
 
     }
 
+    public void JarPuzzle()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 1f);
+        //Debug.Log("PuzzleType = " + )
+    }
+
+    public void PaintingPuzzle()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 2f);
+    }
+
+    public void BookPuzzle()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 3f);
+    }
+
+
 
     private void OnDestroy()
     {
