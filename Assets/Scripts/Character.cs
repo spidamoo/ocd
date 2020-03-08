@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum LookMode {Free, Locked};
 public enum CursorMode {Normal, Highlight, Dragging};
@@ -19,6 +20,8 @@ public class Character : MonoBehaviour
     public bool inTutorial = true;
     public GameObject crosshair;
     public Text exitText;
+    public PostProcessVolume vignetteVolume;
+    public float vignetteSpan = 20.0f;
 
     private CharacterController controller;
     private Vector2 currentRotation = new Vector2(-89.14001f, -54.945f);
@@ -30,6 +33,8 @@ public class Character : MonoBehaviour
     private Vector3   dragPoint;
     private float     dragDistance;
     private float exitTimer;
+    private float anxietyTimer;
+    private Vignette vignetteSettings;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +42,8 @@ public class Character : MonoBehaviour
         dragMask = LayerMask.GetMask("Draggable", "Phone");
 
         Cursor.visible = false;
+
+        vignetteVolume.profile.TryGetSettings(out vignetteSettings);
     }
 
     // Update is called once per frame
@@ -77,19 +84,22 @@ public class Character : MonoBehaviour
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
            
-            var hits = Physics.RaycastAll(ray, Mathf.Infinity, dragMask);
+            var hits = Physics.RaycastAll(ray, 1.3f, dragMask);
             foreach (var hit in hits)
             {
-                cursorMode = CursorMode.Highlight;
-
-                if ( !Input.GetMouseButtonDown(0) )
-                    continue;
-
                 // raycast hit this gameobject
                 Debug.Log("Hit:" + hit.collider.name);
 
                 var puzzle      = hit.rigidbody ? hit.rigidbody.gameObject.GetComponentInChildren<Puzzle>() : hit.collider.gameObject.GetComponentInChildren<Puzzle>();
                 var phoneAudio  = hit.collider.gameObject.GetComponentInChildren<PhoneAudio>();
+
+                if ( (puzzle && !puzzle.solved) || phoneAudio )
+                {
+                    cursorMode = CursorMode.Highlight;
+                }
+
+                if ( !Input.GetMouseButtonDown(0) )
+                    continue;
 
                 if (puzzle != null)
                 {
@@ -166,6 +176,23 @@ public class Character : MonoBehaviour
             }
             exitText.color = Color.clear;
         }
+
+        float anxiety;
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
+        if (anxiety > 0.5f)
+        {
+            anxietyTimer += Time.deltaTime;
+        }
+        else
+        {
+            anxietyTimer -= Time.deltaTime * 10.0f;
+            if (anxietyTimer < 0.0f)
+            {
+                anxietyTimer = 0.0f;
+            }
+        }
+
+        vignetteSettings.intensity.value = anxietyTimer / vignetteSpan;
     }
 
     public void SetLookMode(LookMode mode)
