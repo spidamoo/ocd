@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     public Animator uiAnimator;
 
     private CharacterController controller;
-    private Vector2 currentRotation = new Vector2(-89.14001f, -54.945f);
+    private Vector2 currentRotation = new Vector2(289.0f, -18.1f);
     private LayerMask dragMask;
     private LookMode lookMode = LookMode.Free;
     private CursorMode cursorMode = CursorMode.Normal;
@@ -219,6 +219,7 @@ public class Character : MonoBehaviour
                 crosshair.SetActive(true);
                 break;
             case LookMode.Locked:
+                Debug.Log("euler " + transform.rotation.eulerAngles);
                 Cursor.lockState = CursorLockMode.Locked;
                 ignoreMouseMove = true;
                 crosshair.SetActive(true);
