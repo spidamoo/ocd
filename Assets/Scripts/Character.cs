@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
     public Text exitText;
     public PostProcessVolume vignetteVolume;
     public float vignetteSpan = 20.0f;
+    public Animator uiAnimator;
 
     private CharacterController controller;
     private Vector2 currentRotation = new Vector2(-89.14001f, -54.945f);
@@ -178,7 +179,11 @@ public class Character : MonoBehaviour
         }
 
         float anxiety;
+        float puzzleCounter;
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleCounter", out puzzleCounter);
+        // Debug.Log(string.Format("state: {0} {1}", puzzleCounter, anxiety));
+
         if (anxiety > 0.5f)
         {
             anxietyTimer += Time.deltaTime;
@@ -193,6 +198,11 @@ public class Character : MonoBehaviour
         }
 
         vignetteSettings.intensity.value = anxietyTimer / vignetteSpan;
+
+        if (puzzleCounter > 2.5f && anxiety > 0.5f)
+        {
+            uiAnimator.SetTrigger("credits");
+        }
     }
 
     public void SetLookMode(LookMode mode)

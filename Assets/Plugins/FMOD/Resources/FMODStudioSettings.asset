@@ -16,7 +16,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: Audio/FMODbanks/Desktop
+  sourceBankPath: C:\Users\than\ork\unity\ocd\Audio\FMODbanks\Desktop
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
