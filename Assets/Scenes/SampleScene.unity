@@ -1632,6 +1632,7 @@ GameObject:
   - component: {fileID: 803477358}
   - component: {fileID: 803477359}
   - component: {fileID: 803477360}
+  - component: {fileID: 803477361}
   m_Layer: 8
   m_Name: Pen
   m_TagString: Draggable
@@ -1690,12 +1691,9 @@ MonoBehaviour:
   solved: 0
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
-  solvedEvent:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 963194230}
-        m_MethodName: FinishTutorial
+      - m_Target: {fileID: 803477361}
+        m_MethodName: StartPenMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1705,8 +1703,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: ToVoicemail
+  solvedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194230}
+        m_MethodName: FinishTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1738,30 +1739,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 132704655}
-        m_MethodName: StartNotifying
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1530491824}
-        m_MethodName: StartNotifying
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1256109505}
-        m_MethodName: StartNotifying
+      - m_Target: {fileID: 803477361}
+        m_MethodName: StopPenMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1773,6 +1752,20 @@ MonoBehaviour:
         m_CallState: 2
   theObject: {fileID: 803477357}
   targetObject: {fileID: 1849008189}
+--- !u!114 &803477361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803477357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e703b633f224b35b42311edb941db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PenMoveAudioEvent: event:/Sound design/Puzzle1 - Pens/MovePen
+  PenPlaceAudioEvent: event:/Sound design/Puzzle1 - Pens/PenOnFridge
 --- !u!1 &805910865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3889287092898182241, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -4364,9 +4357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f7591ad3d184b87993673e44b35ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PenScribbleEvent: event:/Sound design/PenScribble
-  PenCapEvent: event:/Sound design/CapOnPen
-  PenOnFridgeEvent: event:/Sound design/PenOnFridge
+  PenScribbleEvent: event:/Sound design/Puzzle1 - Pens/PenScribble
+  PenCapEvent: event:/Sound design/Puzzle1 - Pens/CapOnPen
+  PenOnFridgeEvent: event:/Sound design/Puzzle1 - Pens/PenOnFridge
 --- !u!1 &1316152015
 GameObject:
   m_ObjectHideFlags: 0
