@@ -6,30 +6,31 @@ using FMOD.Studio;
 public class PhoneAudio : MonoBehaviour
 {
 
-    [FMODUnity.EventRef] public string AlexCallingEvent; 
+    [FMODUnity.EventRef] public string PhoneRingEvent;
+    [FMODUnity.EventRef] public string PhoneToVoicemailEvent;
     [FMODUnity.EventRef] public string PlayVoicemailEvent;
 
-    FMOD.Studio.EventInstance AlexCallingInstance;
+    FMOD.Studio.EventInstance PhoneRingInstance;
     FMOD.Studio.EventInstance PlayVoicemailInstance;
 
 
     void Start()
     {
-        AlexCallingInstance = FMODUnity.RuntimeManager.CreateInstance(AlexCallingEvent);
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(AlexCallingInstance, transform, GetComponent<Rigidbody>());
+        PhoneRingInstance = FMODUnity.RuntimeManager.CreateInstance(PhoneRingEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(PhoneRingInstance, transform, GetComponent<Rigidbody>());
     
         PlayVoicemailInstance = FMODUnity.RuntimeManager.CreateInstance(PlayVoicemailEvent);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(PlayVoicemailInstance, transform, GetComponent<Rigidbody>());
 
-
-        AlexCallingInstance.start();
-        AlexCallingInstance.release();
+        PhoneRingInstance.start();
+        PhoneRingInstance.release();
     }
 
 
     public void ToVoicemail()
     {
-        AlexCallingInstance.setParameterByName("ToVoicemail", 1f);
+        PhoneRingInstance.setParameterByName("ToVoicemail", 1f);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(PhoneToVoicemailEvent, gameObject);
     }
 
     public void PlayVoicemail()

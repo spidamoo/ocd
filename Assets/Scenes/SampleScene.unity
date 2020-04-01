@@ -1797,7 +1797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2522c16cc2dde43fbb39a5ef9b4f473a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AlexCallingEvent: event:/Sound design/Phone Ring
+  PhoneRingEvent: event:/Sound design/Phone Ring
+  PhoneToVoicemailEvent: event:/Sound design/PhoneToVoicemail
   PlayVoicemailEvent: event:/Sound design/Voicemail
 --- !u!1 &817558395 stripped
 GameObject:
@@ -1828,6 +1829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835391850}
   - component: {fileID: 835391851}
+  - component: {fileID: 835391852}
   m_Layer: 8
   m_Name: Jar
   m_TagString: Untagged
@@ -1867,6 +1869,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
+--- !u!114 &835391852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835391849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee02f893775774bfa85a5f825e5d455d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JarMoveAudioEvent: event:/Sound design/Puzzle2 - Jar/Jar Slide
 --- !u!1 &836490071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,8 +1995,8 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ComeToMe
+      - m_Target: {fileID: 1676205822}
+        m_MethodName: StartPaintingMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1992,7 +2007,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
-        m_MethodName: InitiateNextPuzzle
+        m_MethodName: PaintingPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2013,22 +2028,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+  solvedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1859655693}
+        m_MethodName: ToRelief
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  solvedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1859655693}
-        m_MethodName: PaintingPuzzle
+      - m_Target: {fileID: 1676205822}
+        m_MethodName: StopPaintingMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3476,30 +3491,8 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ComeToMe
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1859655693}
-        m_MethodName: InitiateNextPuzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 132704655}
-        m_MethodName: StopNotifying
+      - m_Target: {fileID: 835391852}
+        m_MethodName: StartJarMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3520,11 +3513,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 132704655}
+        m_MethodName: StopNotifying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   solvedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1859655693}
         m_MethodName: ToRelief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 835391852}
+        m_MethodName: StopJarMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3958,11 +3973,11 @@ MonoBehaviour:
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 10.2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1165441784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7702181846237412695, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -5107,6 +5122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676205820}
   - component: {fileID: 1676205821}
+  - component: {fileID: 1676205822}
   m_Layer: 8
   m_Name: Painting
   m_TagString: Draggable
@@ -5146,6 +5162,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 110
   m_CollisionDetection: 0
+--- !u!114 &1676205822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676205819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bfdad9920054d63a98edfd60a11174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PaintingMoveAudioEvent: event:/Sound design/Puzzle3 - Painting/Painting Slide
 --- !u!1 &1679873193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5663,6 +5692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893938502}
   - component: {fileID: 1893938503}
+  - component: {fileID: 1893938504}
   m_Layer: 8
   m_Name: Book
   m_TagString: Draggable
@@ -5702,6 +5732,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!114 &1893938504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893938501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d792adda494828b616510fcf70a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BookMoveAudioEvent: event:/Sound design/Puzzle4 - Book/Book slide+place
 --- !u!1 &1942868287
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,32 +6100,10 @@ MonoBehaviour:
   colliders:
   - {fileID: 499841080}
   started: 0
-  solved: 0
+  solved: 1
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ComeToMe
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1859655693}
-        m_MethodName: InitiateNextPuzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1256109505}
         m_MethodName: StopNotifying
         m_Mode: 1
@@ -6095,7 +6116,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
-        m_MethodName: BookPuzzle
+        m_MethodName: InitiateBookPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1893938504}
+        m_MethodName: StartBookMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6110,6 +6142,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1859655693}
         m_MethodName: ToRelief
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1893938504}
+        m_MethodName: StopBookMoveAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6497,6 +6540,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.016267095, y: 0.006081109, z: 0.0073023997}
   m_Center: {x: -0.0015225064, y: 0.0061171837, z: -0.008701792}
+--- !u!1 &2139426321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6470307336976644938, guid: 365dd1f2898484861adad6bcb1d7e34c,
+    type: 3}
+  m_PrefabInstance: {fileID: 877998511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2139426322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139426321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Ambience/City ambience
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.5
+  OverrideMaxDistance: 2
 --- !u!1001 &8298787326279589727
 PrefabInstance:
   m_ObjectHideFlags: 0

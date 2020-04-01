@@ -22,8 +22,7 @@ public class BlackPenAudio : MonoBehaviour
     void Update()
     {
         penSpeed = rb.velocity.magnitude;
-        Debug.Log("Pen speed: " + penSpeed);
-        PenMoveAudioInstance.setParameterByName("penSpeed", penSpeed);
+        PenMoveAudioInstance.setParameterByName("PenSpeed", penSpeed);
     }
 
     public void StartPenMoveAudio()

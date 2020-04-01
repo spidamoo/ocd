@@ -34,7 +34,6 @@ public class MusicPlayer : MonoBehaviour
         PuzzleCounter++;
         Debug.Log("PuzzleCounter: " + PuzzleCounter);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleCounter", PuzzleCounter);
-        //ToAnxiety();
     }
 
 
@@ -55,24 +54,25 @@ public class MusicPlayer : MonoBehaviour
     public void JarPuzzle()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 1f);
-        //Debug.Log("PuzzleType = " + )
+        InitiateNextPuzzle();
     }
 
     public void PaintingPuzzle()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 2f);
+        InitiateNextPuzzle();
     }
 
-    public void BookPuzzle()
+    public void InitiateBookPuzzle()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 3f);
+        InitiateNextPuzzle();
     }
 
 
 
     private void OnDestroy()
     {
-        //AnxietyMusicInstance.release();
         GameplayMasterInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
