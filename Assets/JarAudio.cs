@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class JarAudio : MonoBehaviour
 {
-
     [FMODUnity.EventRef] public string JarMoveAudioEvent;
     FMOD.Studio.EventInstance JarMoveAudioInstance;
 
     private Rigidbody rb;
     private float jarSpeed;
+    public bool jarsPuzzleSolved = false;
+
 
     void Start()
     {
@@ -29,9 +30,12 @@ public class JarAudio : MonoBehaviour
         JarMoveAudioInstance.start();
     }
 
-    public void StopJarMoveAudio()
+    public void JarsPuzzleSolved()
     {
         JarMoveAudioInstance.release();
         JarMoveAudioInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        jarsPuzzleSolved = true;
+        Debug.Log("Jars Puzzle Solved");
     }
 }

@@ -5,11 +5,12 @@ using UnityEngine;
 public class BookAudio : MonoBehaviour
 {
     [FMODUnity.EventRef] public string BookMoveAudioEvent;
-   
     FMOD.Studio.EventInstance BookMoveAudioInstance;
-
+    
     private Rigidbody rb;
     float bookSpeed;
+    public bool bookPuzzleSolved = false;
+
 
     void Start()
     {
@@ -30,9 +31,12 @@ public class BookAudio : MonoBehaviour
         BookMoveAudioInstance.start();
     }
 
-    public void StopBookMoveAudio()
+    public void BookPuzzleSolved()
     {
         BookMoveAudioInstance.setParameterByName("End", 1);
         BookMoveAudioInstance.release();
+
+        bookPuzzleSolved = true;
+        Debug.Log("Book Puzzle Solved");
     }
 }

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PaintingAudio : MonoBehaviour
 {
-
     [FMODUnity.EventRef] public string PaintingMoveAudioEvent;
     FMOD.Studio.EventInstance PaintingMoveAudioInstance;
 
     private Rigidbody rb;
     private float paintingSpeed;
+    public bool paintingPuzzleSolved = false;
+
 
     void Start()
     {
@@ -29,10 +30,12 @@ public class PaintingAudio : MonoBehaviour
         PaintingMoveAudioInstance.start();
     }
 
-    public void StopPaintingMoveAudio()
+    public void PaintingPuzzleSolved()
     {
         PaintingMoveAudioInstance.release();
         PaintingMoveAudioInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-    }
 
+        paintingPuzzleSolved = true;
+        Debug.Log("Painting Puzzle Solved");
+    }
 }

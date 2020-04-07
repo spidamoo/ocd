@@ -51,23 +51,23 @@ public class MusicPlayer : MonoBehaviour
 
     }
 
-    public void JarPuzzle()
-    {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 1f);
-        InitiateNextPuzzle();
-    }
+    //public void JarPuzzle()
+    //{
+    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 1f);
+    //    InitiateNextPuzzle();
+    //}
 
-    public void PaintingPuzzle()
-    {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 2f);
-        InitiateNextPuzzle();
-    }
+    //public void PaintingPuzzle()
+    //{
+    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 2f);
+    //    InitiateNextPuzzle();
+    //}
 
-    public void InitiateBookPuzzle()
-    {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 3f);
-        InitiateNextPuzzle();
-    }
+    //public void InitiateBookPuzzle()
+    //{
+    //    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PuzzleType", 3f);
+    //    InitiateNextPuzzle();
+    //}
 
 
 

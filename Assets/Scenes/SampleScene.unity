@@ -365,8 +365,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.018, y: 0.013778157, z: 0.05}
-  m_Center: {x: -0.0019, y: 0.0059, z: -0.01}
+  m_Size: {x: 0.013830997, y: 0.010174341, z: 0.049999993}
+  m_Center: {x: -0.001606791, y: 0.005992495, z: -0.01}
 --- !u!1 &325649540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1402549672601794153, guid: 365dd1f2898484861adad6bcb1d7e34c,
@@ -1882,6 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JarMoveAudioEvent: event:/Sound design/Puzzle2 - Jar/Jar Slide
+  jarsPuzzleSolved: 0
 --- !u!1 &836490071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2008,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
-        m_MethodName: PaintingPuzzle
+        m_MethodName: InitiateNextPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2043,7 +2044,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1676205822}
-        m_MethodName: StopPaintingMoveAudio
+        m_MethodName: PaintingPuzzleSolved
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3503,7 +3504,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
-        m_MethodName: JarPuzzle
+        m_MethodName: InitiateNextPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3539,7 +3540,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 835391852}
-        m_MethodName: StopJarMoveAudio
+        m_MethodName: JarsPuzzleSolved
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5175,6 +5176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PaintingMoveAudioEvent: event:/Sound design/Puzzle3 - Painting/Painting Slide
+  paintingPuzzleSolved: 0
 --- !u!1 &1679873193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,6 +5747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BookMoveAudioEvent: event:/Sound design/Puzzle4 - Book/Book slide+place
+  bookPuzzleSolved: 0
 --- !u!1 &1942868287
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,7 +6119,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1859655693}
-        m_MethodName: InitiateBookPuzzle
+        m_MethodName: InitiateNextPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6152,7 +6155,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1893938504}
-        m_MethodName: StopBookMoveAudio
+        m_MethodName: BookPuzzleSolved
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6177,6 +6180,7 @@ GameObject:
   - component: {fileID: 2014633505}
   - component: {fileID: 2014633506}
   - component: {fileID: 2014633507}
+  - component: {fileID: 2014633508}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -6349,6 +6353,21 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &2014633508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014633502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e0ee061952a4741a46cd1bf4d4ef53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jarPuzzle: {fileID: 1538491113}
+  paintingPuzzle: {fileID: 738792008}
+  bookPuzzle: {fileID: 1961449432}
 --- !u!1 &2030631786
 GameObject:
   m_ObjectHideFlags: 0
