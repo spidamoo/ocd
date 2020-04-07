@@ -32,9 +32,9 @@ public class DistanceToPuzzle : MonoBehaviour
 
     private void SetNearestPuzzle()
     {
-        distanceToJars = Vector3.Distance(jarPuzzle.position, transform.position);
-        distanceToPainting = Vector3.Distance(paintingPuzzle.position, transform.position);
-        distanceToBooks = Vector3.Distance(bookPuzzle.position, transform.position);
+        distanceToJars = Vector3.Distance(jarPuzzle.position, transform.position) * jarAudioScript.jarsDistanceMultiplier;
+        distanceToPainting = Vector3.Distance(paintingPuzzle.position, transform.position) * paintingAudioScript.paintingDistanceMultiplier;
+        distanceToBooks = Vector3.Distance(bookPuzzle.position, transform.position) * bookAudioScript.bookDistanceMultiplier;
 
         //Debug.Log("Distance to jars: " + distanceToJars);
 
@@ -57,22 +57,6 @@ public class DistanceToPuzzle : MonoBehaviour
         }
 
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleType", out puzzleType);
-        Debug.Log("PuzzleType: " + puzzleType);
+        //Debug.Log("PuzzleType: " + puzzleType);
     }
-
-    //public void JarsPuzzleSolved()
-    //{
-    //    jarsPuzzleSolved = true;
-    //}
-
-    //public void PaintingPuzzleSolved()
-    //{
-    //    paintingPuzzleSolved = true;
-    //}
-
-    //public void BookPuzzleSolved()
-    //{
-    //    bookPuzzleSolved = true;
-    //}
-
 }

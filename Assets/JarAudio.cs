@@ -10,6 +10,7 @@ public class JarAudio : MonoBehaviour
     private Rigidbody rb;
     private float jarSpeed;
     public bool jarsPuzzleSolved = false;
+    public int jarsDistanceMultiplier = 1;
 
 
     void Start()
@@ -21,7 +22,11 @@ public class JarAudio : MonoBehaviour
 
     void Update()
     {
-        jarSpeed = Mathf.Abs(rb.angularVelocity.x);
+        if (rb != null)
+        {
+            jarSpeed = Mathf.Abs(rb.angularVelocity.x);
+        }
+
         JarMoveAudioInstance.setParameterByName("JarSpeed", jarSpeed);
     }
 
@@ -36,6 +41,7 @@ public class JarAudio : MonoBehaviour
         JarMoveAudioInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         jarsPuzzleSolved = true;
-        Debug.Log("Jars Puzzle Solved");
+        jarsDistanceMultiplier = 1000;
+        //Debug.Log("Jars Puzzle Solved");
     }
 }

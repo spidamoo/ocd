@@ -10,6 +10,7 @@ public class PaintingAudio : MonoBehaviour
     private Rigidbody rb;
     private float paintingSpeed;
     public bool paintingPuzzleSolved = false;
+    public int paintingDistanceMultiplier = 1;
 
 
     void Start()
@@ -21,8 +22,20 @@ public class PaintingAudio : MonoBehaviour
 
     void Update()
     {
-        paintingSpeed = Mathf.Abs(rb.angularVelocity.x);
-        PaintingMoveAudioInstance.setParameterByName("PaintingSpeed", paintingSpeed);
+        if (rb != null)
+        {
+            paintingSpeed = Mathf.Abs(rb.angularVelocity.x);
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            //Debug.Log("Mouse Down");
+            PaintingMoveAudioInstance.setParameterByName("PaintingSpeed", paintingSpeed);
+        }
+        else
+        {
+            PaintingMoveAudioInstance.setParameterByName("PaintingSpeed", 0f);
+        }
     }
 
     public void StartPaintingMoveAudio()
@@ -36,6 +49,7 @@ public class PaintingAudio : MonoBehaviour
         PaintingMoveAudioInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         paintingPuzzleSolved = true;
-        Debug.Log("Painting Puzzle Solved");
+        paintingDistanceMultiplier = 1000;
+        //Debug.Log("Painting Puzzle Solved");
     }
 }

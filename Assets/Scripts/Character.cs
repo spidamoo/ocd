@@ -36,6 +36,10 @@ public class Character : MonoBehaviour
     private float exitTimer;
     private float anxietyTimer;
     private Vignette vignetteSettings;
+
+    float voicemail;
+    int toEnding;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -117,15 +121,19 @@ public class Character : MonoBehaviour
                     puzzle.StartSolving();
                 }
 
-                float voicemail;
-
                 FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
                 if (phoneAudio != null && voicemail < 0.5f)
                 {
-                    //setParameterByName("Voicemail", 1f);
-
                     Debug.Log("Hit phone");
+
+
                     phoneAudio.PlayVoicemail();
+
+                    if (toEnding == 1)
+                    {
+                        Debug.Log("Trigger eindanimatie");
+                        uiAnimator.SetTrigger("credits");
+                    }
                 }
             }
         }
@@ -180,8 +188,10 @@ public class Character : MonoBehaviour
 
         float anxiety;
         float puzzleCounter;
+        //float voicemail;
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleCounter", out puzzleCounter);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
         // Debug.Log(string.Format("state: {0} {1}", puzzleCounter, anxiety));
 
         if (anxiety > 0.5f)
@@ -199,9 +209,9 @@ public class Character : MonoBehaviour
 
         vignetteSettings.intensity.value = anxietyTimer / vignetteSpan;
 
-        if (puzzleCounter > 2.5f && anxiety > 0.5f)
+        if (puzzleCounter > 2.5f && anxiety > 0.5f && voicemail > 0.5f)
         {
-            uiAnimator.SetTrigger("credits");
+            toEnding = 1;
         }
     }
 

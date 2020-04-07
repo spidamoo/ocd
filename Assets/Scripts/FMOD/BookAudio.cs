@@ -10,6 +10,7 @@ public class BookAudio : MonoBehaviour
     private Rigidbody rb;
     float bookSpeed;
     public bool bookPuzzleSolved = false;
+    public int bookDistanceMultiplier = 1;
 
 
     void Start()
@@ -21,7 +22,11 @@ public class BookAudio : MonoBehaviour
 
     void Update()
     {
-        bookSpeed = rb.velocity.magnitude;
+        if (rb != null)
+        {
+            bookSpeed = rb.velocity.magnitude;
+        }
+
         BookMoveAudioInstance.setParameterByName("BookSpeed", bookSpeed);
     }
 
@@ -37,6 +42,6 @@ public class BookAudio : MonoBehaviour
         BookMoveAudioInstance.release();
 
         bookPuzzleSolved = true;
-        Debug.Log("Book Puzzle Solved");
+        bookDistanceMultiplier = 1000;
     }
 }

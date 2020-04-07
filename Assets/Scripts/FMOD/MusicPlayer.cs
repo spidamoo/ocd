@@ -10,8 +10,6 @@ public class MusicPlayer : MonoBehaviour
 
     public static FMOD.Studio.EventInstance GameplayMasterInstance;
 
-    //public int startGame = 0;
-
     public int PuzzleCounter = 0;
     public PhoneAudio phoneAudio;
 
