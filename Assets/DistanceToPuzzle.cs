@@ -16,7 +16,7 @@ public class DistanceToPuzzle : MonoBehaviour
     float distanceToBooks;
 
     private float puzzleType;
-
+    private float anxiety;
 
     void Start()
     {
@@ -27,7 +27,11 @@ public class DistanceToPuzzle : MonoBehaviour
 
     void Update()
     {
-        SetNearestPuzzle();
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
+        if (anxiety >0.5f)
+        {
+            SetNearestPuzzle();
+        }
     }
 
     private void SetNearestPuzzle()
@@ -57,6 +61,6 @@ public class DistanceToPuzzle : MonoBehaviour
         }
 
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleType", out puzzleType);
-        //Debug.Log("PuzzleType: " + puzzleType);
+        Debug.Log("PuzzleType: " + puzzleType);
     }
 }
