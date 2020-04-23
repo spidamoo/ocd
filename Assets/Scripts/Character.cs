@@ -22,6 +22,7 @@ public class Character : MonoBehaviour
     public Text exitText;
     public PostProcessVolume vignetteVolume;
     public float vignetteSpan = 20.0f;
+    public float maxVignetteIntensity = 1.0f;
     public Animator uiAnimator;
 
     private CharacterController controller;
@@ -36,9 +37,9 @@ public class Character : MonoBehaviour
     private float exitTimer;
     private float anxietyTimer;
     private Vignette vignetteSettings;
+    private bool gameEnded;
 
     float voicemail;
-    int toEnding;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class Character : MonoBehaviour
         {
             SetLookMode(LookMode.Free);
         }
-        else
+        else if (!gameEnded)
         {
             SetLookMode(LookMode.Locked);
 
@@ -82,6 +83,14 @@ public class Character : MonoBehaviour
             currentRotation.y = Mathf.Clamp(currentRotation.y, -maxYAngle, maxYAngle);
             transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
         }
+
+        float anxiety;
+        float puzzleCounter;
+        float voicemail;
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleCounter", out puzzleCounter);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
+        Debug.Log(string.Format("state: {0} {1} {2}", puzzleCounter, anxiety, voicemail));
 
         if (draggedBody == null)
         {
@@ -121,7 +130,6 @@ public class Character : MonoBehaviour
                     puzzle.StartSolving();
                 }
 
-                FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
                 if (phoneAudio != null && voicemail < 0.5f)
                 {
                     Debug.Log("Hit phone");
@@ -129,9 +137,10 @@ public class Character : MonoBehaviour
 
                     phoneAudio.PlayVoicemail();
 
-                    if (toEnding == 1)
+                    if (puzzleCounter > 2.5f)
                     {
                         Debug.Log("Trigger eindanimatie");
+                        gameEnded = true;
                         uiAnimator.SetTrigger("credits");
                     }
                 }
@@ -186,14 +195,6 @@ public class Character : MonoBehaviour
             exitText.color = Color.clear;
         }
 
-        float anxiety;
-        float puzzleCounter;
-        //float voicemail;
-        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Anxiety", out anxiety);
-        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("PuzzleCounter", out puzzleCounter);
-        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Voicemail", out voicemail);
-        // Debug.Log(string.Format("state: {0} {1}", puzzleCounter, anxiety));
-
         if (anxiety > 0.5f)
         {
             anxietyTimer += Time.deltaTime;
@@ -208,10 +209,9 @@ public class Character : MonoBehaviour
         }
 
         vignetteSettings.intensity.value = anxietyTimer / vignetteSpan;
-
-        if (puzzleCounter > 2.5f && anxiety > 0.5f && voicemail > 0.5f)
+        if (vignetteSettings.intensity.value > maxVignetteIntensity)
         {
-            toEnding = 1;
+            vignetteSettings.intensity.value = maxVignetteIntensity;
         }
     }
 

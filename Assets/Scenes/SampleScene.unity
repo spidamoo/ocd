@@ -732,9 +732,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &545575146
 MeshRenderer:
@@ -855,9 +855,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &553669853
 MeshRenderer:
@@ -1538,9 +1538,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -6956048135646167668, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
 --- !u!1 &799663549 stripped
 GameObject:
@@ -3132,9 +3132,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &893596238
 MeshRenderer:
@@ -3678,6 +3678,7 @@ MonoBehaviour:
   exitText: {fileID: 1679873195}
   vignetteVolume: {fileID: 1493989862}
   vignetteSpan: 20
+  maxVignetteIntensity: 0.9
   uiAnimator: {fileID: 893991242}
 --- !u!114 &963194231
 MonoBehaviour:
@@ -3733,9 +3734,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &968099785
 MeshRenderer:
@@ -4738,7 +4739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1493989862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,9 +4827,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4233441389072688922, guid: 365dd1f2898484861adad6bcb1d7e34c, type: 3}
 --- !u!23 &1538491115
 MeshRenderer:
@@ -5460,9 +5461,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1856479562
 MeshRenderer:
@@ -5957,7 +5958,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 499841080}
   started: 0
-  solved: 1
+  solved: 0
   startEvent:
     m_PersistentCalls:
       m_Calls:
